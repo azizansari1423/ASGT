@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,99 +29,67 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
+            height: 72px;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 1px 8px rgba(0,0,0,0.07);
         }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-emblem {
-            width: 44px; height: 44px;
-            background: var(--navy);
-            border-radius: 50%;
-            border: 2px solid var(--gold);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--gold); font-weight: 900; font-size: 13px;
-            letter-spacing: 0.5px;
-        }
-        .logo-name { font-size: 20px; font-weight: 900; color: var(--navy); letter-spacing: 1px; }
-        .logo-sub { font-size: 10px; color: var(--text-light); display: block; margin-top: -2px; letter-spacing: 1.5px; text-transform: uppercase; }
-        .nav-links { display: flex; gap: 28px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-bar { width: 3px; height: 46px; background: var(--navy); border-radius: 2px; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; justify-content: center; }
+        .logo-asgt { font-size: 24px; font-weight: 900; color: var(--navy); letter-spacing: 2px; line-height: 1; }
+        .logo-india-row { display: flex; align-items: center; gap: 6px; margin-top: 1px; }
+        .logo-india { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 4px; border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
+        .logo-arrow-gold { color: var(--gold); font-size: 16px; font-weight: 900; }
+        .logo-tagline-nav { font-size: 8px; letter-spacing: 1.5px; color: #999; text-transform: uppercase; margin-top: 3px; }
+        .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 13px; font-weight: 500; transition: color 0.2s; letter-spacing: 0.3px; }
         .nav-links a:hover { color: var(--navy); }
         .nav-cta { background: var(--navy) !important; color: white !important; padding: 9px 22px; border-radius: 6px; font-weight: 700 !important; }
         .nav-cta:hover { background: var(--navy-dark) !important; color: white !important; }
 
         /* HERO */
         .hero {
-            background: linear-gradient(140deg, #061524 0%, #0a1d33 45%, #0F2747 100%);
+            background: linear-gradient(135deg, #061524 0%, #0a1d33 50%, #0F2747 100%);
             color: white;
-            padding: 90px 6% 100px;
-            text-align: center;
+            padding: 70px 6% 0;
             position: relative;
             overflow: hidden;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -60px; right: -60px;
-            width: 320px; height: 320px;
-            border-radius: 50%;
-            border: 1px solid rgba(212,162,74,0.15);
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding-bottom: 70px;
         }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -80px; left: -80px;
-            width: 400px; height: 400px;
-            border-radius: 50%;
-            border: 1px solid rgba(212,162,74,0.1);
-        }
-        .hero-badge {
-            display: inline-block;
-            background: rgba(212,162,74,0.15);
-            border: 1px solid rgba(212,162,74,0.4);
-            color: var(--gold-light);
-            padding: 7px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 28px;
-            letter-spacing: 0.5px;
-        }
-        .hero-emblem {
-            width: 90px; height: 90px;
-            background: rgba(212,162,74,0.12);
-            border: 2px solid var(--gold);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 28px;
-            font-size: 13px; font-weight: 900;
-            color: var(--gold); letter-spacing: 1px;
-        }
-        .hero h1 {
-            font-size: 50px;
-            font-weight: 900;
-            line-height: 1.1;
-            max-width: 740px;
-            margin: 0 auto 20px;
-            letter-spacing: -1.5px;
-        }
-        .hero h1 span { color: var(--gold); }
+        .hero-left { display: flex; justify-content: center; align-items: center; }
+        .hero-emblem-wrap { width: 300px; height: 300px; }
+        .hero-right { display: flex; flex-direction: column; justify-content: center; }
         .hero-tagline {
-            font-size: 13px;
+            font-size: 11px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            color: rgba(212,162,74,0.8);
-            margin-bottom: 16px;
+            color: rgba(212,162,74,0.75);
+            margin-bottom: 14px;
             font-weight: 600;
         }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.0;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+        .hero h1 span { color: var(--gold); display: block; }
         .hero p {
-            font-size: 18px;
-            opacity: 0.82;
-            max-width: 540px;
-            margin: 0 auto 40px;
+            font-size: 16px;
+            opacity: 0.78;
+            max-width: 420px;
+            margin-bottom: 36px;
             line-height: 1.75;
         }
         .hero-cta {
@@ -130,24 +98,30 @@
             gap: 10px;
             background: var(--gold);
             color: var(--navy-dark);
-            padding: 16px 36px;
-            border-radius: 8px;
+            padding: 15px 32px;
+            border-radius: 6px;
             font-weight: 800;
-            font-size: 16px;
+            font-size: 15px;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
+            align-self: flex-start;
         }
-        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.3); }
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 56px;
-            margin-top: 64px;
-            padding-top: 44px;
+        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.35); }
+        .hero-pillars {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             border-top: 1px solid rgba(212,162,74,0.2);
         }
-        .stat-num { font-size: 26px; font-weight: 900; color: var(--gold); }
-        .stat-label { font-size: 12px; opacity: 0.7; margin-top: 4px; }
+        .pillar {
+            padding: 24px 20px;
+            text-align: center;
+            border-right: 1px solid rgba(212,162,74,0.15);
+            transition: background 0.2s;
+        }
+        .pillar:last-child { border-right: none; }
+        .pillar:hover { background: rgba(212,162,74,0.06); }
+        .pillar-icon { font-size: 22px; margin-bottom: 8px; }
+        .pillar-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
 
         /* SHARED SECTION */
         .section-wrap { max-width: 1100px; margin: 0 auto; padding: 76px 6%; }
@@ -212,7 +186,7 @@
         .req-list { list-style: none; margin-bottom: 24px; }
         .req-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; display: flex; align-items: center; gap: 10px; }
         .req-list li:last-child { border-bottom: none; }
-        .req-list li::before { content: "â†’"; color: var(--navy); font-weight: 800; }
+        .req-list li::before { content: "&#8594;"; color: var(--navy); font-weight: 800; }
         .cta-btn {
             display: block; width: 100%;
             background: var(--navy); color: white;
@@ -225,17 +199,22 @@
 
         /* FOOTER */
         footer { background: #060f1a; color: rgba(255,255,255,0.5); padding: 40px 6%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-        .foot-brand { display: flex; align-items: center; gap: 12px; }
-        .foot-emblem { width: 36px; height: 36px; background: rgba(212,162,74,0.15); border: 1px solid rgba(212,162,74,0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 10px; font-weight: 900; }
-        .foot-name { color: white; font-weight: 900; font-size: 16px; letter-spacing: 1px; }
-        .foot-reg { font-size: 11px; margin-top: 2px; color: rgba(255,255,255,0.4); letter-spacing: 0.5px; }
+        .foot-brand { display: flex; align-items: center; gap: 10px; }
+        .foot-bar { width: 3px; height: 36px; background: var(--gold); border-radius: 2px; }
+        .foot-asgt { color: white; font-weight: 900; font-size: 18px; letter-spacing: 2px; line-height: 1; }
+        .foot-india { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 3px; }
+        .foot-reg { font-size: 11px; margin-top: 2px; color: rgba(255,255,255,0.35); letter-spacing: 0.5px; }
         footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
         footer a:hover { color: var(--gold); }
 
         /* RESPONSIVE */
         @media (max-width: 860px) {
-            .hero h1 { font-size: 34px; }
-            .hero-stats { gap: 28px; }
+            .hero-inner { grid-template-columns: 1fr; gap: 40px; padding-bottom: 50px; text-align: center; }
+            .hero-left { order: -1; }
+            .hero-emblem-wrap { width: 220px; height: 220px; }
+            .hero h1 { font-size: 36px; }
+            .hero-cta { align-self: center; }
+            .hero-pillars { grid-template-columns: repeat(2, 1fr); }
             .product-grid, .contact-grid { grid-template-columns: 1fr; }
             .features-grid, .sourcing-grid { grid-template-columns: 1fr 1fr; }
             .certs-grid { grid-template-columns: 1fr 1fr; }
@@ -244,8 +223,8 @@
         }
         @media (max-width: 520px) {
             .features-grid, .sourcing-grid, .certs-grid { grid-template-columns: 1fr; }
-            .hero-stats { flex-direction: column; gap: 18px; }
-            .hero h1 { font-size: 30px; letter-spacing: -0.5px; }
+            .hero-pillars { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 30px; }
         }
     </style>
 </head>
@@ -254,46 +233,124 @@
 <!-- NAV -->
 <nav>
     <a href="#" class="logo">
-        <div class="logo-emblem">ASGT</div>
-        <div>
-            <span class="logo-name">ASGT INDIA</span>
-            <span class="logo-sub">Advanced Supply Â· Global Transit</span>
+        <div class="logo-bar"></div>
+        <div class="logo-text">
+            <span class="logo-asgt">ASGT</span>
+            <div class="logo-india-row">
+                <span class="logo-india">INDIA</span>
+                <span class="logo-arrow-gold">&#8594;</span>
+            </div>
+            <span class="logo-tagline-nav">Advanced Supply &middot; Global Transit</span>
         </div>
     </a>
     <ul class="nav-links">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#why-us">Why Us</a></li>
-        <li><a href="#sourcing">Sourcing</a></li>
-        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#product">Products</a></li>
+        <li><a href="#why-us">About Us</a></li>
+        <li><a href="#sourcing">Markets</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-badge">ðŸŒ¿ Maharashtra, India &nbsp;Â·&nbsp; Export Trading</div>
-    <div class="hero-emblem">ASGT</div>
-    <div class="hero-tagline">Advanced Supply Â· Global Transit</div>
-    <h1>Premium <span>Dehydrated Onion Powder</span><br>from India</h1>
-    <p>Sourced from the Nashikâ€“Lasalgaon belt â€” India's largest onion-producing region. Reliable supply, consistent quality, complete export documentation.</p>
-    <a href="mailto:info@asglobaltrade.in?subject=Inquiry: Dehydrated Onion Powder&body=Company Name:%0ACountry:%0ARequired Grade/Mesh:%0AQuantity:%0ADestination Port:%0ACertifications Required:" class="hero-cta">
-        Request a Quote â†’
-    </a>
-    <div class="hero-stats">
-        <div>
-            <div class="stat-num">India #1</div>
-            <div class="stat-label">Onion Producer Globally</div>
+    <div class="hero-inner">
+        <!-- Left: Premium Emblem SVG -->
+        <div class="hero-left">
+            <div class="hero-emblem-wrap">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <!-- Outer decorative ring -->
+                    <circle cx="100" cy="100" r="97" fill="none" stroke="#D4A24A" stroke-width="1" stroke-dasharray="3,2.5"/>
+                    <circle cx="100" cy="100" r="93" fill="none" stroke="#D4A24A" stroke-width="0.5"/>
+                    <!-- Main navy circle -->
+                    <circle cx="100" cy="100" r="91" fill="#0F2747"/>
+                    <!-- Inner gold ring -->
+                    <circle cx="100" cy="100" r="88" fill="none" stroke="#D4A24A" stroke-width="1.5"/>
+                    <!-- Left laurel branch stem -->
+                    <path d="M 70 155 Q 42 128 42 100 Q 42 72 70 48" fill="none" stroke="#D4A24A" stroke-width="1.5"/>
+                    <!-- Left leaves -->
+                    <ellipse cx="68" cy="150" rx="4" ry="7" fill="#D4A24A" transform="rotate(210,68,150)"/>
+                    <ellipse cx="52" cy="137" rx="4" ry="7" fill="#D4A24A" transform="rotate(230,52,137)"/>
+                    <ellipse cx="44" cy="119" rx="4" ry="7" fill="#D4A24A" transform="rotate(250,44,119)"/>
+                    <ellipse cx="41" cy="100" rx="4" ry="7" fill="#D4A24A" transform="rotate(270,41,100)"/>
+                    <ellipse cx="44" cy="81" rx="4" ry="7" fill="#D4A24A" transform="rotate(290,44,81)"/>
+                    <ellipse cx="52" cy="63" rx="4" ry="7" fill="#D4A24A" transform="rotate(310,52,63)"/>
+                    <ellipse cx="68" cy="52" rx="4" ry="7" fill="#D4A24A" transform="rotate(330,68,52)"/>
+                    <!-- Right laurel branch stem -->
+                    <path d="M 130 155 Q 158 128 158 100 Q 158 72 130 48" fill="none" stroke="#D4A24A" stroke-width="1.5"/>
+                    <!-- Right leaves -->
+                    <ellipse cx="132" cy="150" rx="4" ry="7" fill="#D4A24A" transform="rotate(150,132,150)"/>
+                    <ellipse cx="148" cy="137" rx="4" ry="7" fill="#D4A24A" transform="rotate(130,148,137)"/>
+                    <ellipse cx="156" cy="119" rx="4" ry="7" fill="#D4A24A" transform="rotate(110,156,119)"/>
+                    <ellipse cx="159" cy="100" rx="4" ry="7" fill="#D4A24A" transform="rotate(90,159,100)"/>
+                    <ellipse cx="156" cy="81" rx="4" ry="7" fill="#D4A24A" transform="rotate(70,156,81)"/>
+                    <ellipse cx="148" cy="63" rx="4" ry="7" fill="#D4A24A" transform="rotate(50,148,63)"/>
+                    <ellipse cx="132" cy="52" rx="4" ry="7" fill="#D4A24A" transform="rotate(30,132,52)"/>
+                    <!-- Ashoka Chakra outer rim -->
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="white" stroke-width="1.5"/>
+                    <!-- Inner hub -->
+                    <circle cx="100" cy="100" r="7" fill="none" stroke="white" stroke-width="1.5"/>
+                    <circle cx="100" cy="100" r="2.5" fill="white"/>
+                    <!-- 24 Spokes -->
+                    <line x1="107.0" y1="100.0" x2="140.0" y2="100.0" stroke="white" stroke-width="1"/>
+                    <line x1="106.8" y1="101.8" x2="138.6" y2="110.4" stroke="white" stroke-width="1"/>
+                    <line x1="106.1" y1="103.5" x2="134.6" y2="120.0" stroke="white" stroke-width="1"/>
+                    <line x1="105.0" y1="105.0" x2="128.3" y2="128.3" stroke="white" stroke-width="1"/>
+                    <line x1="103.5" y1="106.1" x2="120.0" y2="134.6" stroke="white" stroke-width="1"/>
+                    <line x1="101.8" y1="106.8" x2="110.4" y2="138.6" stroke="white" stroke-width="1"/>
+                    <line x1="100.0" y1="107.0" x2="100.0" y2="140.0" stroke="white" stroke-width="1"/>
+                    <line x1="98.2" y1="106.8" x2="89.6" y2="138.6" stroke="white" stroke-width="1"/>
+                    <line x1="96.5" y1="106.1" x2="80.0" y2="134.6" stroke="white" stroke-width="1"/>
+                    <line x1="95.0" y1="105.0" x2="71.7" y2="128.3" stroke="white" stroke-width="1"/>
+                    <line x1="93.9" y1="103.5" x2="65.4" y2="120.0" stroke="white" stroke-width="1"/>
+                    <line x1="93.2" y1="101.8" x2="61.4" y2="110.4" stroke="white" stroke-width="1"/>
+                    <line x1="93.0" y1="100.0" x2="60.0" y2="100.0" stroke="white" stroke-width="1"/>
+                    <line x1="93.2" y1="98.2" x2="61.4" y2="89.6" stroke="white" stroke-width="1"/>
+                    <line x1="93.9" y1="96.5" x2="65.4" y2="80.0" stroke="white" stroke-width="1"/>
+                    <line x1="95.0" y1="95.0" x2="71.7" y2="71.7" stroke="white" stroke-width="1"/>
+                    <line x1="96.5" y1="93.9" x2="80.0" y2="65.4" stroke="white" stroke-width="1"/>
+                    <line x1="98.2" y1="93.2" x2="89.6" y2="61.4" stroke="white" stroke-width="1"/>
+                    <line x1="100.0" y1="93.0" x2="100.0" y2="60.0" stroke="white" stroke-width="1"/>
+                    <line x1="101.8" y1="93.2" x2="110.4" y2="61.4" stroke="white" stroke-width="1"/>
+                    <line x1="103.5" y1="93.9" x2="120.0" y2="65.4" stroke="white" stroke-width="1"/>
+                    <line x1="105.0" y1="95.0" x2="128.3" y2="71.7" stroke="white" stroke-width="1"/>
+                    <line x1="106.1" y1="96.5" x2="134.6" y2="80.0" stroke="white" stroke-width="1"/>
+                    <line x1="106.8" y1="98.2" x2="138.6" y2="89.6" stroke="white" stroke-width="1"/>
+                    <!-- Arrow pointing upper-right -->
+                    <line x1="90" y1="110" x2="122" y2="78" stroke="#D4A24A" stroke-width="3" stroke-linecap="round"/>
+                    <polygon points="122,78 112,81 119,88" fill="#D4A24A"/>
+                    <!-- ASGT INDIA text -->
+                    <text x="100" y="175" text-anchor="middle" fill="#D4A24A" font-size="8" font-weight="700" letter-spacing="3" font-family="Segoe UI, sans-serif">ASGT INDIA</text>
+                </svg>
+            </div>
         </div>
-        <div>
-            <div class="stat-num">FOB Mumbai</div>
-            <div class="stat-label">Export Port</div>
+        <!-- Right: Text content -->
+        <div class="hero-right">
+            <div class="hero-tagline">Advanced Supply &nbsp;&middot;&nbsp; Global Transit</div>
+            <h1>ADVANCED SUPPLY<span>GLOBAL TRANSIT</span></h1>
+            <p>Reliable Products. Trusted Partnerships. Global Reach. &mdash; Premium dehydrated onion powder from Maharashtra's Nashik&ndash;Lasalgaon belt, export-ready with full documentation.</p>
+            <a href="mailto:info@asglobaltrade.in?subject=Inquiry: Dehydrated Onion Powder&body=Company Name:%0ACountry:%0ARequired Grade/Mesh:%0AQuantity:%0ADestination Port:%0ACertifications Required:" class="hero-cta">
+                Request a Quote &rarr;
+            </a>
         </div>
-        <div>
-            <div class="stat-num">1 MT+</div>
-            <div class="stat-label">Trial Order Minimum</div>
+    </div>
+    <!-- Bottom pillars -->
+    <div class="hero-pillars">
+        <div class="pillar">
+            <div class="pillar-icon">&#127760;</div>
+            <div class="pillar-label">Global Reach</div>
         </div>
-        <div>
-            <div class="stat-num">24 hrs</div>
-            <div class="stat-label">Quote Response Time</div>
+        <div class="pillar">
+            <div class="pillar-icon">&#128230;</div>
+            <div class="pillar-label">Reliable Solutions</div>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon">&#128674;</div>
+            <div class="pillar-label">Smooth Transit</div>
+        </div>
+        <div class="pillar">
+            <div class="pillar-icon">&#129309;</div>
+            <div class="pillar-label">Trusted Partnerships</div>
         </div>
     </div>
 </section>
@@ -303,24 +360,22 @@
     <div class="section-wrap">
         <div class="section-label">Our Product</div>
         <h2>Dehydrated Onion Powder</h2>
-        <p class="section-desc">Export-grade onion powder sourced from verified processors in Nashik and Lasalgaon, Maharashtra â€” India's leading dehydrated vegetable processing belt.</p>
-
+        <p class="section-desc">Export-grade onion powder sourced from verified processors in Nashik and Lasalgaon, Maharashtra &mdash; India's leading dehydrated vegetable processing belt.</p>
         <div class="product-grid">
             <div class="product-card">
                 <div class="product-card-head">
                     <h3>Product Specifications</h3>
-                    <p>Standard export grade Â· Batch-specific COA available</p>
+                    <p>Standard export grade &middot; Batch-specific COA available</p>
                 </div>
                 <div class="spec-row"><span class="spec-label">Product</span><span class="spec-value">Dehydrated Onion Powder</span></div>
                 <div class="spec-row"><span class="spec-label">HS Code</span><span class="spec-value">0712 20 00</span></div>
-                <div class="spec-row"><span class="spec-label">Mesh Size</span><span class="spec-value">80â€“100 mesh (custom on request)</span></div>
-                <div class="spec-row"><span class="spec-label">Moisture</span><span class="spec-value">â‰¤ 5%</span></div>
+                <div class="spec-row"><span class="spec-label">Mesh Size</span><span class="spec-value">80&ndash;100 mesh (custom on request)</span></div>
+                <div class="spec-row"><span class="spec-label">Moisture</span><span class="spec-value">&le; 5%</span></div>
                 <div class="spec-row"><span class="spec-label">Color</span><span class="spec-value">Cream to light tan</span></div>
                 <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-value">100% Dehydrated Onion</span></div>
-                <div class="spec-row"><span class="spec-label">Shelf Life</span><span class="spec-value">18â€“24 months from manufacturing</span></div>
+                <div class="spec-row"><span class="spec-label">Shelf Life</span><span class="spec-value">18&ndash;24 months from manufacturing</span></div>
                 <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-value">India (Maharashtra)</span></div>
             </div>
-
             <div class="product-side">
                 <h3>Packing Options</h3>
                 <p>We supply in buyer-specified packaging. Standard and custom packing available on request.</p>
@@ -330,13 +385,10 @@
                     <span class="pack-tag">Custom Packing</span>
                     <span class="pack-tag">Private Label</span>
                 </div>
-
                 <h3>Minimum Order</h3>
                 <p>Trial orders from 1 MT. Commercial quantities available with lead time confirmation from our supplier network.</p>
-
                 <h3>Incoterms</h3>
                 <p>We quote <strong>FOB Mumbai</strong>. CFR / CIF available on request for major international destination ports.</p>
-
                 <h3>Sample Policy</h3>
                 <p>Evaluation samples available for qualified buyers. Contact us to discuss sample and courier arrangements.</p>
             </div>
@@ -349,37 +401,37 @@
     <div class="section-wrap">
         <div class="section-label">Why Choose Us</div>
         <h2>Reliable Products. Trusted Partnerships. Global Reach.</h2>
-        <p class="section-desc">We handle sourcing, quality verification, documentation, and logistics â€” so you receive consistent quality with minimal back-and-forth.</p>
+        <p class="section-desc">We handle sourcing, quality verification, documentation, and logistics &mdash; so you receive consistent quality with minimal back-and-forth.</p>
         <div class="features-grid">
             <div class="feat">
-                <div class="feat-icon">ðŸŒ±</div>
+                <div class="feat-icon">&#127807;</div>
                 <h4>Source-Verified Supply</h4>
                 <p>We physically visit and score processors before selection. Only verified suppliers make it into our network.</p>
             </div>
             <div class="feat">
-                <div class="feat-icon">ðŸ”¬</div>
+                <div class="feat-icon">&#128302;</div>
                 <h4>Lab-Tested Quality</h4>
                 <p>Products tested at NABL-accredited laboratories. Full COA covering moisture, color, mesh, and microbial parameters available per batch.</p>
             </div>
             <div class="feat">
-                <div class="feat-icon">ðŸ“¦</div>
+                <div class="feat-icon">&#128230;</div>
                 <h4>Buyer-Specific Packing</h4>
-                <p>Pack to your specification â€” bag size, labeling, and branding as required. We coordinate directly with the processor.</p>
+                <p>Pack to your specification &mdash; bag size, labeling, and branding as required. We coordinate directly with the processor.</p>
             </div>
             <div class="feat">
-                <div class="feat-icon">ðŸ“„</div>
+                <div class="feat-icon">&#128196;</div>
                 <h4>Complete Documentation</h4>
                 <p>Commercial invoice, packing list, COA, Certificate of Origin, Phytosanitary certificate, and all required shipping documents handled.</p>
             </div>
             <div class="feat">
-                <div class="feat-icon">ðŸš¢</div>
+                <div class="feat-icon">&#128674;</div>
                 <h4>FOB Mumbai Shipment</h4>
-                <p>Goods dispatched from JNPT Mumbai â€” one of Asia's largest container ports with direct connections to major import destinations.</p>
+                <p>Goods dispatched from JNPT Mumbai &mdash; one of Asia's largest container ports with direct connections to major import destinations.</p>
             </div>
             <div class="feat">
-                <div class="feat-icon">ðŸ’¬</div>
+                <div class="feat-icon">&#128172;</div>
                 <h4>Dedicated Export Manager</h4>
-                <p>One point of contact from inquiry to delivery. Timely updates at every stage â€” quote, procurement, dispatch, and arrival.</p>
+                <p>One point of contact from inquiry to delivery. Timely updates at every stage &mdash; quote, procurement, dispatch, and arrival.</p>
             </div>
         </div>
     </div>
@@ -390,48 +442,16 @@
     <div class="section-wrap">
         <div class="section-label">Documentation</div>
         <h2>Certifications &amp; Documents</h2>
-        <p class="section-desc">Please confirm your specific requirements when enquiring â€” we will verify availability and include in your quotation.</p>
+        <p class="section-desc">Please confirm your specific requirements when enquiring &mdash; we will verify availability and include in your quotation.</p>
         <div class="certs-grid">
-            <div class="cert">
-                <h5>Certificate of Analysis</h5>
-                <p>Batch-specific lab parameters</p>
-                <span class="badge-avail">Available</span>
-            </div>
-            <div class="cert">
-                <h5>NABL Lab Report</h5>
-                <p>Accredited laboratory testing</p>
-                <span class="badge-avail">Available</span>
-            </div>
-            <div class="cert">
-                <h5>Certificate of Origin</h5>
-                <p>Issued by APEDA / Chamber</p>
-                <span class="badge-avail">Available</span>
-            </div>
-            <div class="cert">
-                <h5>Phytosanitary Certificate</h5>
-                <p>Plant health compliance</p>
-                <span class="badge-avail">Available</span>
-            </div>
-            <div class="cert">
-                <h5>FSSAI License</h5>
-                <p>India food safety compliance</p>
-                <span class="badge-req">On Request</span>
-            </div>
-            <div class="cert">
-                <h5>Halal Certificate</h5>
-                <p>Muslim-majority market buyers</p>
-                <span class="badge-req">On Request</span>
-            </div>
-            <div class="cert">
-                <h5>Allergen Declaration</h5>
-                <p>Product allergen statement</p>
-                <span class="badge-req">On Request</span>
-            </div>
-            <div class="cert">
-                <h5>Pesticide / Heavy Metals</h5>
-                <p>Residue and contaminant report</p>
-                <span class="badge-req">On Request</span>
-            </div>
+            <div class="cert"><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="badge-avail">Available</span></div>
+            <div class="cert"><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="badge-avail">Available</span></div>
+            <div class="cert"><h5>Certificate of Origin</h5><p>Issued by APEDA / Chamber</p><span class="badge-avail">Available</span></div>
+            <div class="cert"><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="badge-avail">Available</span></div>
+            <div class="cert"><h5>FSSAI License</h5><p>India food safety compliance</p><span class="badge-req">On Request</span></div>
+            <div class="cert"><h5>Halal Certificate</h5><p>Muslim-majority market buyers</p><span class="badge-req">On Request</span></div>
+            <div class="cert"><h5>Allergen Declaration</h5><p>Product allergen statement</p><span class="badge-req">On Request</span></div>
+            <div class="cert"><h5>Pesticide / Heavy Metals</h5><p>Residue and contaminant report</p><span class="badge-req">On Request</span></div>
         </div>
     </div>
 </section>
@@ -445,7 +465,7 @@
         <div class="sourcing-grid">
             <div class="source-card">
                 <h4>Nashik District</h4>
-                <p>Maharashtra's primary onion-growing region. High-quality Kharif and Rabi crop. Known for optimal pungency and dry matter content â€” ideal for dehydration.</p>
+                <p>Maharashtra's primary onion-growing region. High-quality Kharif and Rabi crop. Known for optimal pungency and dry matter content &mdash; ideal for dehydration.</p>
             </div>
             <div class="source-card">
                 <h4>Lasalgaon Mandi</h4>
@@ -465,46 +485,44 @@
         <div class="section-label">Contact Us</div>
         <h2>Request a Quote or Sample</h2>
         <p class="section-desc">Share your requirement and we will respond within 24 hours with a quotation or sample dispatch details.</p>
-
         <div class="contact-grid">
             <div>
                 <div class="contact-item">
-                    <div class="c-icon">âœ‰ï¸</div>
+                    <div class="c-icon">&#9993;</div>
                     <div class="c-text">
                         <strong>General Inquiries</strong>
                         <a href="mailto:info@asglobaltrade.in">info@asglobaltrade.in</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="c-icon">ðŸ‘¤</div>
+                    <div class="c-icon">&#128100;</div>
                     <div class="c-text">
                         <strong>Export Manager</strong>
                         <a href="mailto:rahil@asglobaltrade.in">rahil@asglobaltrade.in</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="c-icon">ðŸ“±</div>
+                    <div class="c-icon">&#128241;</div>
                     <div class="c-text">
                         <strong>WhatsApp</strong>
                         <a href="https://wa.me/919142515515">+91 91425 15515</a>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="c-icon">ðŸ“</div>
+                    <div class="c-icon">&#128205;</div>
                     <div class="c-text">
                         <strong>Location</strong>
-                        <span>Ahmednagar, Maharashtra, India â€” 414001</span>
+                        <span>Ahmednagar, Maharashtra, India &mdash; 414001</span>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="c-icon">ðŸ›ï¸</div>
+                    <div class="c-icon">&#127963;</div>
                     <div class="c-text">
                         <strong>Udyam Registration</strong>
                         <span>UDYAM-MH-01-0300536</span>
                     </div>
                 </div>
             </div>
-
             <div class="inquiry-box">
                 <h3>To Get an Accurate Quote, Share:</h3>
                 <p>Send these details to <a href="mailto:info@asglobaltrade.in" style="color:var(--navy);font-weight:600;">info@asglobaltrade.in</a></p>
@@ -517,7 +535,7 @@
                     <li>Target price (optional)</li>
                 </ul>
                 <a href="mailto:info@asglobaltrade.in?subject=Dehydrated Onion Powder Inquiry&body=Company Name:%0ACountry:%0ARequired Grade/Mesh Size:%0AQuantity Needed:%0APackaging Size:%0ADestination Port:%0ACertifications Required:%0ATarget Price (optional):" class="cta-btn">
-                    Send Inquiry by Email â†’
+                    Send Inquiry by Email &rarr;
                 </a>
             </div>
         </div>
@@ -527,19 +545,19 @@
 <!-- FOOTER -->
 <footer>
     <div class="foot-brand">
-        <div class="foot-emblem">ASGT</div>
+        <div class="foot-bar"></div>
         <div>
-            <div class="foot-name">ASGT INDIA</div>
-            <div class="foot-reg">Advanced Supply Â· Global Transit &nbsp;Â·&nbsp; Udyam: UDYAM-MH-01-0300536</div>
+            <div class="foot-asgt">ASGT</div>
+            <div class="foot-india">INDIA &nbsp;&#8594;</div>
+            <div class="foot-reg">Advanced Supply &middot; Global Transit &nbsp;&middot;&nbsp; Udyam: UDYAM-MH-01-0300536</div>
         </div>
     </div>
     <div style="font-size:13px; display:flex; gap:20px; flex-wrap:wrap;">
         <a href="mailto:info@asglobaltrade.in">info@asglobaltrade.in</a>
         <a href="https://wa.me/919142515515">+91 91425 15515</a>
     </div>
-    <div style="font-size:12px;">Â© 2026 ASGT India. All rights reserved.</div>
+    <div style="font-size:12px;">&copy; 2026 ASGT India. All rights reserved.</div>
 </footer>
 
 </body>
 </html>
-
