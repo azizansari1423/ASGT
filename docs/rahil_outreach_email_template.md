@@ -22,7 +22,7 @@
 
 Dear [Contact Name / Company Name],
 
-Greetings from AS Global, India.
+Greetings from ASGT India, India.
 
 We are an export trading company from Maharashtra, India, working with verified processors of Dehydrated Onion Powder from the Nashik–Lasalgaon region — India's largest onion-producing belt.
 
@@ -47,7 +47,7 @@ We look forward to your response.
 
 Best regards,
 Rahil
-Export Manager — AS Global | Maharashtra, India
+Export Manager — ASGT India | Maharashtra, India
 📧 rahil@asglobaltrade.in
 📱 +91 91425 15515 (WhatsApp)
 🌐 www.asglobaltrade.in
@@ -57,7 +57,7 @@ Udyam: UDYAM-MH-01-0300536
 
 ## LinkedIn Version (shorter — 300 characters max for connection note)
 
-Hi [Name], I'm Rahil from AS Global, India. We export Dehydrated Onion Powder from Maharashtra — 1 MT trial orders, full documentation, FOB Mumbai. Would love to connect if you source food ingredients from India.
+Hi [Name], I'm Rahil from ASGT India, India. We export Dehydrated Onion Powder from Maharashtra — 1 MT trial orders, full documentation, FOB Mumbai. Would love to connect if you source food ingredients from India.
 
 ---
 
