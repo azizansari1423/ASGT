@@ -676,7 +676,7 @@
             <h3>Send Your Enquiry</h3>
             <p>We respond within 1 business day.</p>
             <!-- FormSubmit: on first submission, check info@asglobaltrade.in inbox for activation email and click confirm -->
-            <form action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
+            <form id="enquiry-form" action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
                 <input type="hidden" name="_subject" value="New Enquiry — ASGT India Website">
                 <input type="hidden" name="_next" value="https://asglobaltrade.in/?sent=1">
                 <input type="hidden" name="_captcha" value="false">
@@ -809,23 +809,43 @@
             }
         });
     }
-    if (window.location.search.indexOf(‘sent=1’) !== -1) {
+    function showModal() {
         var overlay = document.getElementById(‘success-overlay’);
         var closeBtn = document.getElementById(‘success-close’);
-        if (overlay) {
-            overlay.classList.add(‘show’);
-            history.replaceState(null, ‘’, window.location.pathname);
-            function closeModal() {
-                overlay.classList.remove(‘show’);
-            }
-            if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
-            overlay.addEventListener(‘click’, function (e) {
-                if (e.target === overlay) closeModal();
+        if (!overlay) return;
+        overlay.classList.add(‘show’);
+        history.replaceState(null, ‘’, window.location.pathname);
+        function closeModal() { overlay.classList.remove(‘show’); }
+        if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
+        overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
+        document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
+    }
+
+    if (window.location.search.indexOf(‘sent=1’) !== -1) { showModal(); }
+
+    var enquiryForm = document.getElementById(‘enquiry-form’);
+    if (enquiryForm) {
+        enquiryForm.addEventListener(‘submit’, function (e) {
+            e.preventDefault();
+            var submitBtn = enquiryForm.querySelector(‘[type="submit"]’);
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = ‘Sending…’; }
+            fetch(‘https://formsubmit.co/ajax/info@asglobaltrade.in’, {
+                method: ‘POST’,
+                body: new FormData(enquiryForm),
+                headers: { ‘Accept’: ‘application/json’ }
+            })
+            .then(function (r) { return r.json(); })
+            .then(function () {
+                enquiryForm.reset();
+                showModal();
+            })
+            .catch(function () {
+                enquiryForm.submit();
+            })
+            .finally(function () {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = ‘Send Enquiry →’; }
             });
-            document.addEventListener(‘keydown’, function (e) {
-                if (e.key === ‘Escape’) closeModal();
-            });
-        }
+        });
     }
 }());
 </script>

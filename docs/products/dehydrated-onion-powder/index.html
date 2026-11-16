@@ -258,6 +258,19 @@
             .form-row { grid-template-columns: 1fr; }
             .footer-top { grid-template-columns: 1fr; gap: 36px; }
         }
+        .success-overlay { display: none; position: fixed; inset: 0; background: rgba(6,15,30,.88); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .success-overlay.show { display: flex; }
+        .success-card { background: white; border-radius: 20px; padding: 52px 44px; max-width: 500px; width: 100%; text-align: center; box-shadow: 0 24px 72px rgba(0,0,0,.45); }
+        .success-check { width: 76px; height: 76px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 34px; color: #2e7d32; font-weight: 900; }
+        .success-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+        .success-card .success-msg { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 10px; }
+        .success-card .success-msg strong { color: var(--navy); }
+        .success-divider { height: 1px; background: var(--border); margin: 20px 0; }
+        .success-alt { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.7; }
+        .success-alt a { color: var(--navy); font-weight: 600; text-decoration: none; }
+        .success-btn { display: inline-block; background: var(--navy); color: white; font-weight: 700; font-size: 15px; padding: 14px 36px; border-radius: 8px; border: none; cursor: pointer; font-family: inherit; transition: background .2s; }
+        .success-btn:hover { background: var(--navy-dark); }
+        @media (max-width: 600px) { .success-card { padding: 36px 24px; } .success-check { width: 60px; height: 60px; font-size: 26px; } }
     </style>
 </head>
 <body>
@@ -466,7 +479,7 @@
         <div class="enquiry-form-box">
             <h3>Send Your Enquiry</h3>
             <p>We respond within 1 business day.</p>
-            <form action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
+            <form id="enquiry-form" action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
                 <input type="hidden" name="_subject" value="Product Enquiry — Dehydrated Onion Powder — ASGT India">
                 <input type="hidden" name="_next" value="https://asglobaltrade.in/products/dehydrated-onion-powder/?sent=1">
                 <input type="hidden" name="_captcha" value="false">
@@ -604,17 +617,43 @@
             }
         });
     }
-    if (window.location.search.indexOf(‘sent=1’) !== -1) {
+    function showModal() {
         var overlay = document.getElementById(‘success-overlay’);
         var closeBtn = document.getElementById(‘success-close’);
-        if (overlay) {
-            overlay.classList.add(‘show’);
-            history.replaceState(null, ‘’, window.location.pathname);
-            function closeModal() { overlay.classList.remove(‘show’); }
-            if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
-            overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
-            document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
-        }
+        if (!overlay) return;
+        overlay.classList.add(‘show’);
+        history.replaceState(null, ‘’, window.location.pathname);
+        function closeModal() { overlay.classList.remove(‘show’); }
+        if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
+        overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
+        document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
+    }
+
+    if (window.location.search.indexOf(‘sent=1’) !== -1) { showModal(); }
+
+    var enquiryForm = document.getElementById(‘enquiry-form’);
+    if (enquiryForm) {
+        enquiryForm.addEventListener(‘submit’, function (e) {
+            e.preventDefault();
+            var submitBtn = enquiryForm.querySelector(‘[type="submit"]’);
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = ‘Sending…’; }
+            fetch(‘https://formsubmit.co/ajax/info@asglobaltrade.in’, {
+                method: ‘POST’,
+                body: new FormData(enquiryForm),
+                headers: { ‘Accept’: ‘application/json’ }
+            })
+            .then(function (r) { return r.json(); })
+            .then(function () {
+                enquiryForm.reset();
+                showModal();
+            })
+            .catch(function () {
+                enquiryForm.submit();
+            })
+            .finally(function () {
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = ‘Send Enquiry →’; }
+            });
+        });
     }
 }());
 </script>
