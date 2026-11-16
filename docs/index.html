@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Primary Meta -->
     <title>ASGT India | Dehydrated Onion Powder Exporter from India</title>
     <meta name="description" content="ASGT India exports premium dehydrated onion powder from Maharashtra, India. Verified processors, NABL lab testing, full export documentation. Serving buyers in Indonesia, Malaysia, Bangladesh, UK and USA.">
     <meta name="keywords" content="dehydrated onion powder exporter India, onion powder supplier India, bulk onion powder Maharashtra, Indian agricultural exporter, dehydrated onion products">
@@ -15,29 +14,25 @@
     <meta name="author" content="ASGT India">
     <link rel="canonical" href="https://asglobaltrade.in/">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://asglobaltrade.in/">
     <meta property="og:site_name" content="ASGT India">
-    <meta property="og:title" content="ASGT India | Advanced Supply • Global Transit">
+    <meta property="og:title" content="ASGT India | Advanced Supply &bull; Global Transit">
     <meta property="og:description" content="ASGT India is an Indian export trading company focused on reliable products, trusted partnerships and global supply. Dehydrated onion powder exporter from Maharashtra.">
     <meta property="og:image" content="https://asglobaltrade.in/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ASGT India | Advanced Supply • Global Transit">
+    <meta name="twitter:title" content="ASGT India | Advanced Supply &bull; Global Transit">
     <meta name="twitter:description" content="Premium dehydrated onion powder from Maharashtra, India. Full export documentation. Serving Indonesia, Malaysia, Bangladesh, UK, USA.">
     <meta name="twitter:image" content="https://asglobaltrade.in/og-image.png">
 
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -83,279 +78,259 @@
     </script>
 
     <style>
-        /* ===== RESET & TOKENS ===== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --navy: #0F2747;
             --navy-dark: #0a1d33;
-            --navy-light: #1a3a5c;
+            --navy-mid: #162f54;
             --gold: #D4A24A;
-            --gold-light: #e8c070;
-            --text: #1a1a1a;
-            --text-light: #5a6474;
-            --bg-light: #f5f7fa;
-            --white: #ffffff;
-            --border: #dce3ed;
+            --gold-light: #e8c474;
+            --text: #1a2035;
+            --text-muted: #5a6474;
+            --bg: #f5f7fa;
+            --white: #fff;
+            --border: #e2e8f0;
+            --r: 10px;
+            --r-lg: 16px;
         }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); line-height: 1.6; }
+        body { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); line-height: 1.65; }
 
-        /* ===== ACCESSIBILITY ===== */
-        .skip-link {
-            position: absolute; top: -100px; left: 16px; z-index: 9999;
-            background: var(--navy); color: white; padding: 10px 18px;
-            border-radius: 0 0 6px 6px; text-decoration: none; font-weight: 700;
-            transition: top 0.2s;
-        }
-        .skip-link:focus { top: 0; }
+        .skip { position: absolute; top: -100px; left: 16px; z-index: 9999; background: var(--navy); color: white; padding: 10px 18px; border-radius: 0 0 6px 6px; text-decoration: none; font-weight: 700; transition: top .2s; }
+        .skip:focus { top: 0; }
         *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
 
-        /* ===== NAV ===== */
-        nav {
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            padding: 0 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 72px;
-            position: sticky;
-            top: 0;
-            z-index: 200;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.07);
-        }
+        /* NAV */
+        nav { position: sticky; top: 0; z-index: 200; background: var(--white); border-bottom: 1px solid var(--border); height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; box-shadow: 0 1px 8px rgba(0,0,0,.07); }
         .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-bar { width: 3px; height: 46px; background: var(--navy); border-radius: 2px; flex-shrink: 0; }
-        .logo-text { display: flex; flex-direction: column; justify-content: center; }
-        .logo-asgt { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; font-size: 26px; font-weight: 900; color: var(--navy); letter-spacing: 1px; line-height: 1; }
-        .logo-india-row { display: flex; align-items: center; gap: 6px; margin-top: 1px; }
-        .logo-india { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 4px; border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
-        .logo-arrow-gold { color: var(--gold); font-size: 16px; font-weight: 900; }
-        .logo-tagline-nav { font-size: 8px; letter-spacing: 1.5px; color: #999; text-transform: uppercase; margin-top: 3px; }
+        .logo-bar { width: 3px; height: 44px; background: var(--navy); border-radius: 2px; flex-shrink: 0; }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-asgt { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 900; color: var(--navy); letter-spacing: 1px; line-height: 1.1; }
+        .logo-india-row { display: flex; align-items: center; gap: 5px; }
+        .logo-india { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 4px; border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
+        .logo-arrow { color: var(--gold); font-size: 14px; }
+        .nav-menu { display: flex; gap: 4px; list-style: none; align-items: center; }
+        .nav-menu a { text-decoration: none; color: var(--text-muted); font-size: 13.5px; font-weight: 500; padding: 7px 12px; border-radius: 6px; transition: color .2s, background .2s; letter-spacing: .2px; }
+        .nav-menu a:hover { color: var(--navy); background: var(--bg); }
+        .nav-cta { background: var(--navy) !important; color: white !important; font-weight: 700 !important; padding: 9px 22px !important; border-radius: 6px !important; }
+        .nav-cta:hover { background: var(--navy-dark) !important; color: white !important; }
+        .hamburger { display: none; background: none; border: 1px solid var(--border); border-radius: 7px; cursor: pointer; padding: 8px; gap: 5px; align-items: center; justify-content: center; width: 42px; height: 42px; flex-direction: column; }
+        .hamburger span { display: block; width: 20px; height: 2px; background: var(--navy); border-radius: 2px; transition: all .3s; }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-        .nav-links { display: flex; gap: 6px; list-style: none; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 13px; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: color 0.2s, background 0.2s; letter-spacing: 0.3px; }
-        .nav-links a:hover { color: var(--navy); background: var(--bg-light); }
-        .nav-cta { background: var(--navy) !important; color: white !important; padding: 8px 20px !important; border-radius: 6px !important; font-weight: 700 !important; }
-        .nav-cta:hover { background: var(--navy-dark) !important; }
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #060f1e 0%, #0a1d33 45%, #0F2747 100%); color: white; padding: 80px 6% 0; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 65% at 85% 50%, rgba(212,162,74,.08) 0%, transparent 65%), radial-gradient(ellipse 40% 50% at 15% 80%, rgba(6,15,30,.7) 0%, transparent 60%); pointer-events: none; }
+        .hero-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 1fr; gap: 80px; align-items: center; padding-bottom: 80px; position: relative; z-index: 1; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(212,162,74,.12); color: var(--gold-light); border: 1px solid rgba(212,162,74,.28); border-radius: 20px; padding: 6px 16px; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
+        .hero h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 54px; font-weight: 900; line-height: 1.07; letter-spacing: -1.5px; margin-bottom: 20px; }
+        .hero h1 em { color: var(--gold); font-style: normal; display: block; }
+        .hero-sub { font-size: 16px; opacity: .78; line-height: 1.82; max-width: 440px; margin-bottom: 38px; }
+        .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+        .btn-gold { background: var(--gold); color: var(--navy-dark); font-weight: 800; font-size: 15px; padding: 14px 30px; border-radius: 7px; text-decoration: none; transition: transform .2s, box-shadow .2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+        .btn-wa { border: 1.5px solid rgba(255,255,255,.32); color: white; font-weight: 600; font-size: 14px; padding: 14px 26px; border-radius: 7px; text-decoration: none; transition: border-color .2s, background .2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-wa:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
+        .hero-right { display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
+        .hero-emblem { width: 320px; height: 320px; }
+        .hero-emblem img { width: 100%; height: 100%; }
+        .hero-stats { border-top: 1px solid rgba(212,162,74,.18); position: relative; z-index: 1; }
+        .hero-stats-row { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+        .hstat { padding: 24px 20px; border-right: 1px solid rgba(212,162,74,.12); transition: background .2s; text-align: center; }
+        .hstat:last-child { border-right: none; }
+        .hstat:hover { background: rgba(212,162,74,.05); }
+        .hstat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--gold-light); line-height: 1; }
+        .hstat-label { font-size: 11px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; opacity: .6; margin-top: 5px; }
 
-        /* Hamburger */
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            cursor: pointer;
-            padding: 8px;
-            flex-direction: column;
-            gap: 5px;
-            align-items: center;
-            justify-content: center;
-            width: 42px; height: 42px;
-        }
-        .nav-toggle span {
-            display: block; width: 20px; height: 2px;
-            background: var(--navy); border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .nav-toggle.active span:nth-child(2) { opacity: 0; }
-        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        /* TRUST BAR */
+        .trust-bar { background: var(--white); border-bottom: 1px solid var(--border); }
+        .trust-inner { max-width: 1200px; margin: 0 auto; padding: 18px 6%; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--text-muted); white-space: nowrap; }
+        .trust-icon { font-size: 16px; }
+        .trust-item strong { color: var(--text); font-weight: 600; }
+        .trust-sep { width: 1px; height: 22px; background: var(--border); flex-shrink: 0; }
 
-        /* ===== HERO ===== */
-        .hero {
-            background: linear-gradient(135deg, #061524 0%, #0a1d33 50%, #0F2747 100%);
-            color: white;
-            padding: 70px 6% 0;
-            overflow: hidden;
-        }
-        .hero-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            padding-bottom: 70px;
-        }
-        .hero-left { display: flex; justify-content: center; align-items: center; }
-        .hero-emblem-wrap { width: 300px; height: 300px; }
-        .hero-right { display: flex; flex-direction: column; justify-content: center; }
-        .hero-tagline {
-            font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
-            color: rgba(212,162,74,0.8); margin-bottom: 14px; font-weight: 600;
-        }
-        .hero h1 {
-            font-size: 46px; font-weight: 900; line-height: 1.0;
-            letter-spacing: -1px; margin-bottom: 20px;
-        }
-        .hero h1 span { color: var(--gold); display: block; }
-        .hero-subtitle { font-size: 16px; opacity: 0.78; max-width: 420px; margin-bottom: 36px; line-height: 1.75; }
-        .hero-cta {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: var(--gold); color: var(--navy-dark);
-            padding: 15px 32px; border-radius: 6px;
-            font-weight: 800; font-size: 15px; text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s; align-self: flex-start;
-        }
-        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.35); }
-        .hero-pillars { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(212,162,74,0.2); }
-        .pillar {
-            padding: 24px 20px; text-align: center;
-            border-right: 1px solid rgba(212,162,74,0.15); transition: background 0.2s;
-        }
-        .pillar:last-child { border-right: none; }
-        .pillar:hover { background: rgba(212,162,74,0.06); }
-        .pillar-icon { font-size: 20px; margin-bottom: 8px; }
-        .pillar-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); }
-
-        /* ===== SHARED SECTION ===== */
-        .section-wrap { max-width: 1100px; margin: 0 auto; padding: 76px 6%; }
+        /* SECTION BASE */
+        .section { padding: 90px 6%; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
         .section-label { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; }
-        h2 { font-size: 34px; font-weight: 900; color: var(--text); line-height: 1.2; letter-spacing: -0.5px; max-width: 580px; }
-        .section-desc { color: var(--text-light); font-size: 16px; line-height: 1.75; max-width: 580px; margin-top: 14px; }
+        .section-title { font-family: 'Playfair Display', Georgia, serif; font-size: 36px; font-weight: 900; color: var(--text); line-height: 1.18; letter-spacing: -.5px; }
+        .section-title-white { color: white; }
+        .section-desc { color: var(--text-muted); font-size: 16px; line-height: 1.82; max-width: 580px; margin-top: 14px; }
 
-        /* ===== ABOUT ===== */
-        .about-bg { background: var(--bg-light); }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 44px; align-items: start; }
-        .about-text p { color: var(--text-light); font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+        /* ABOUT */
+        .about-bg { background: var(--bg); }
+        .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; margin-top: 50px; align-items: start; }
+        .about-text p { color: var(--text-muted); font-size: 15.5px; line-height: 1.9; margin-bottom: 18px; }
         .about-text p:last-child { margin-bottom: 0; }
-        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .about-stat { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
-        .about-stat-num { font-size: 22px; font-weight: 900; color: var(--navy); }
-        .about-stat-label { font-size: 12px; color: var(--text-light); margin-top: 4px; }
+        .about-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+        .badge { display: inline-flex; align-items: center; gap: 6px; background: white; border: 1px solid var(--border); padding: 7px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 600; color: var(--navy); }
+        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .stat-card { background: white; border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px 20px; text-align: center; border-top: 3px solid var(--gold); }
+        .stat-num { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--navy); }
+        .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 5px; line-height: 1.45; }
 
-        /* ===== PRODUCT ===== */
-        .product-bg { background: white; }
-        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; margin-top: 48px; }
-        .product-card { background: var(--bg-light); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
-        .product-card-head { background: var(--navy); color: white; padding: 22px 26px; }
-        .product-card-head h3 { font-size: 17px; font-weight: 700; }
-        .product-card-head p { font-size: 12px; opacity: 0.72; margin-top: 4px; }
-        .spec-row { display: flex; justify-content: space-between; padding: 11px 26px; border-bottom: 1px solid var(--border); font-size: 14px; background: white; }
-        .spec-row:last-child { border-bottom: none; }
-        .spec-label { color: var(--text-light); }
-        .spec-value { font-weight: 600; text-align: right; }
-        .product-side h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; margin-top: 26px; color: var(--navy); }
-        .product-side h3:first-child { margin-top: 0; }
-        .product-side p { color: var(--text-light); font-size: 14px; line-height: 1.75; }
-        .pack-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
-        .pack-tag { background: white; border: 1px solid var(--border); padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--navy); }
+        /* PRODUCT */
+        .product-bg { background: var(--white); }
+        .product-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; margin-top: 50px; display: grid; grid-template-columns: 360px 1fr; }
+        .product-visual { background: linear-gradient(160deg, #060f1e 0%, #0F2747 60%, #162f54 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 52px 32px; min-height: 440px; position: relative; overflow: hidden; }
+        .product-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 70% at 50% 40%, rgba(212,162,74,.14) 0%, transparent 65%); }
+        .pv-label { position: relative; z-index: 1; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(212,162,74,.85); border: 1px solid rgba(212,162,74,.28); padding: 5px 14px; border-radius: 20px; margin-bottom: 22px; }
+        .pv-name { position: relative; z-index: 1; text-align: center; font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: white; line-height: 1.18; margin-bottom: 8px; }
+        .pv-origin { position: relative; z-index: 1; font-size: 11.5px; color: rgba(255,255,255,.58); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; }
+        .pv-tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; }
+        .pv-tag { background: rgba(212,162,74,.14); color: var(--gold-light); border: 1px solid rgba(212,162,74,.24); padding: 5px 13px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+        .product-details { padding: 38px 38px; }
+        .product-details h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 900; color: var(--navy); margin-bottom: 5px; }
+        .product-hs { font-size: 12px; color: var(--text-muted); margin-bottom: 24px; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        .specs-table tr { border-bottom: 1px solid var(--border); }
+        .specs-table tr:last-child { border-bottom: none; }
+        .specs-table td { padding: 11px 0; font-size: 14px; }
+        .specs-table .sk { color: var(--text-muted); width: 46%; }
+        .specs-table .sv { font-weight: 600; color: var(--text); }
+        .product-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-navy { background: var(--navy); color: white; font-weight: 700; font-size: 14px; padding: 13px 26px; border-radius: 7px; text-decoration: none; transition: background .2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-navy:hover { background: var(--navy-dark); }
+        .btn-navy-outline { border: 1.5px solid var(--navy); color: var(--navy); font-weight: 600; font-size: 14px; padding: 12px 24px; border-radius: 7px; text-decoration: none; transition: background .2s, color .2s; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-navy-outline:hover { background: var(--navy); color: white; }
 
-        /* ===== WHY US ===== */
-        .why-bg { background: var(--bg-light); }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
-        .feat { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; transition: box-shadow 0.2s, border-color 0.2s; }
-        .feat:hover { box-shadow: 0 4px 20px rgba(15,39,71,0.1); border-color: var(--gold); }
-        .feat-icon { font-size: 24px; margin-bottom: 14px; }
-        .feat h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--navy); }
-        .feat p { font-size: 13px; color: var(--text-light); line-height: 1.7; }
+        /* WHY US */
+        .why-bg { background: var(--navy); }
+        .why-bg .section-label { color: rgba(212,162,74,.8); }
+        .why-bg .section-desc { color: rgba(255,255,255,.65); }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 50px; }
+        .why-card { background: rgba(255,255,255,.05); border: 1px solid rgba(212,162,74,.18); border-radius: var(--r); padding: 30px 26px; transition: background .25s, border-color .25s; }
+        .why-card:hover { background: rgba(212,162,74,.07); border-color: rgba(212,162,74,.4); }
+        .why-icon { font-size: 26px; margin-bottom: 14px; }
+        .why-card h4 { font-size: 15px; font-weight: 700; color: var(--gold-light); margin-bottom: 10px; }
+        .why-card p { font-size: 13.5px; opacity: .75; color: white; line-height: 1.75; }
 
-        /* ===== CERTS ===== */
-        .certs-bg { background: white; }
-        .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 40px; }
-        .cert { background: var(--bg-light); border: 1px solid var(--border); border-radius: 10px; padding: 18px 14px; text-align: center; }
-        .cert h5 { font-size: 13px; font-weight: 700; margin-bottom: 5px; color: var(--text); }
-        .cert p { font-size: 12px; color: var(--text-light); }
-        .badge-avail { display: inline-block; background: #e8f0fb; color: var(--navy); padding: 3px 12px; border-radius: 10px; font-size: 11px; font-weight: 700; margin-top: 8px; }
-        .badge-req { display: inline-block; background: #fdf6ec; color: #8a6200; padding: 3px 12px; border-radius: 10px; font-size: 11px; font-weight: 700; margin-top: 8px; }
+        /* PROCESS */
+        .process-bg { background: var(--bg); }
+        .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 56px; position: relative; }
+        .process-steps::before { content: ''; position: absolute; top: 27px; left: calc(10% + 8px); right: calc(10% + 8px); height: 2px; background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 8px, transparent 8px, transparent 18px); z-index: 0; }
+        .step { text-align: center; padding: 0 10px; position: relative; z-index: 1; }
+        .step-num { width: 54px; height: 54px; border-radius: 50%; background: var(--navy); color: white; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 3px solid var(--bg); box-shadow: 0 0 0 3px var(--gold); }
+        .step h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 7px; }
+        .step p { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
 
-        /* ===== SOURCING ===== */
-        .sourcing-bg { background: var(--navy); color: white; }
-        .sourcing-bg h2 { color: white; }
-        .sourcing-bg .section-label { color: var(--gold); }
-        .sourcing-bg .section-desc { color: rgba(255,255,255,0.72); }
-        .sourcing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
-        .source-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(212,162,74,0.22); border-radius: 12px; padding: 28px 22px; }
-        .source-card h4 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--gold); }
-        .source-card p { font-size: 13px; opacity: 0.80; line-height: 1.7; }
+        /* MARKETS */
+        .markets-bg { background: var(--white); }
+        .markets-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 50px; }
+        .market-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r); padding: 26px 18px; border-top: 4px solid var(--gold); transition: transform .2s, box-shadow .2s; }
+        .market-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+        .market-flag { font-size: 30px; margin-bottom: 10px; display: block; }
+        .market-card h4 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
+        .market-card p { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
 
-        /* ===== MARKETS ===== */
-        .markets-bg { background: var(--bg-light); }
-        .markets-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 44px; }
-        .market-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 24px 18px; border-top: 3px solid var(--gold); }
-        .market-card h4 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-        .market-card p { font-size: 13px; color: var(--text-light); line-height: 1.65; }
+        /* CERTS */
+        .certs-bg { background: var(--bg); }
+        .certs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 50px; }
+        .cert-card { background: white; border: 1px solid var(--border); border-radius: var(--r); padding: 20px 16px; text-align: center; transition: border-color .2s, box-shadow .2s; }
+        .cert-card:hover { border-color: var(--navy); box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+        .cert-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+        .cert-card h5 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+        .cert-card p { font-size: 11.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 10px; }
+        .pill-avail { background: #e8f5e9; color: #2e7d32; padding: 3px 11px; border-radius: 20px; font-size: 11px; font-weight: 700; }
+        .pill-req { background: #fff8e1; color: #8a6200; padding: 3px 11px; border-radius: 20px; font-size: 11px; font-weight: 700; }
 
-        /* ===== CONTACT ===== */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; margin-top: 48px; }
-        .contact-item { display: flex; gap: 14px; margin-bottom: 20px; align-items: flex-start; }
-        .c-icon { width: 42px; height: 42px; background: var(--bg-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; border: 1px solid var(--border); }
-        .c-text strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 3px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
-        .c-text a, .c-text span { font-size: 15px; color: var(--text); text-decoration: none; font-weight: 500; }
-        .c-text a:hover { color: var(--navy); text-decoration: underline; }
-        .inquiry-box { background: var(--bg-light); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
-        .inquiry-box h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; color: var(--navy); }
-        .inquiry-box > p { color: var(--text-light); font-size: 13px; margin-bottom: 22px; }
-        .req-list { list-style: none; margin-bottom: 24px; }
-        .req-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; display: flex; align-items: center; gap: 10px; }
-        .req-list li:last-child { border-bottom: none; }
-        .req-list li::before { content: "\2192"; color: var(--navy); font-weight: 800; }
-        .cta-btn {
-            display: block; width: 100%; background: var(--navy); color: white;
-            padding: 15px 24px; border-radius: 8px; text-align: center;
-            text-decoration: none; font-weight: 800; font-size: 15px; transition: background 0.2s;
-        }
-        .cta-btn:hover { background: var(--navy-dark); }
+        /* ENQUIRY */
+        .enquiry-bg { background: linear-gradient(135deg, #060f1e 0%, #0F2747 100%); padding: 90px 6%; }
+        .enquiry-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; align-items: start; }
+        .enquiry-left { color: white; }
+        .enquiry-left .section-label { color: rgba(212,162,74,.8); }
+        .enquiry-left .section-title { margin-bottom: 16px; }
+        .enquiry-left > p { color: rgba(255,255,255,.7); font-size: 15px; line-height: 1.82; margin-bottom: 36px; }
+        .ec-list { display: flex; flex-direction: column; gap: 18px; }
+        .ec-item { display: flex; align-items: flex-start; gap: 14px; }
+        .ec-icon { width: 42px; height: 42px; background: rgba(212,162,74,.12); border: 1px solid rgba(212,162,74,.22); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+        .ec-label { font-size: 11px; font-weight: 700; color: rgba(255,255,255,.48); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 3px; }
+        .ec-val a, .ec-val span { color: white; font-size: 15px; font-weight: 500; text-decoration: none; }
+        .ec-val a:hover { color: var(--gold-light); }
+        .enquiry-form-box { background: white; border-radius: var(--r-lg); padding: 36px; }
+        .enquiry-form-box h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: var(--navy); margin-bottom: 5px; }
+        .enquiry-form-box > p { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .fg { margin-bottom: 14px; }
+        .fg label { display: block; font-size: 12.5px; font-weight: 600; color: var(--text); margin-bottom: 5px; }
+        .fg input, .fg textarea { width: 100%; border: 1.5px solid var(--border); border-radius: 7px; padding: 11px 14px; font-size: 14px; font-family: inherit; color: var(--text); transition: border-color .2s; background: var(--white); }
+        .fg input:focus, .fg textarea:focus { border-color: var(--navy); outline: none; }
+        .fg textarea { resize: vertical; min-height: 90px; }
+        .form-submit { width: 100%; background: var(--navy); color: white; border: none; padding: 15px 24px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background .2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .form-submit:hover { background: var(--navy-dark); }
+        .form-note { font-size: 11.5px; color: var(--text-muted); text-align: center; margin-top: 12px; }
 
-        /* ===== FOOTER ===== */
-        footer { background: #060f1a; color: rgba(255,255,255,0.5); padding: 40px 6%; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .foot-brand { display: flex; align-items: center; gap: 10px; }
+        /* FOOTER */
+        footer { background: #060f1a; padding: 56px 6% 32px; color: rgba(255,255,255,.5); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 60px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.08); }
+        .foot-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
         .foot-bar { width: 3px; height: 36px; background: var(--gold); border-radius: 2px; }
-        .foot-asgt { color: white; font-weight: 900; font-size: 18px; letter-spacing: 2px; line-height: 1; }
-        .foot-india { color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 3px; }
-        .foot-reg { font-size: 11px; margin-top: 2px; color: rgba(255,255,255,0.3); }
-        .footer-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; }
-        footer a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
-        footer a:hover { color: var(--gold); }
-        .footer-copy { font-size: 12px; }
+        .foot-asgt { color: white; font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; letter-spacing: 1px; }
+        .foot-india { color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 3px; }
+        .footer-brand p { font-size: 13px; line-height: 1.82; max-width: 280px; }
+        .footer-brand .freg { font-size: 11px; color: rgba(255,255,255,.28); margin-top: 12px; }
+        .fcol h4 { color: white; font-size: 13px; font-weight: 700; margin-bottom: 16px; letter-spacing: .5px; }
+        .fcol ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .fcol ul a { color: rgba(255,255,255,.5); text-decoration: none; font-size: 13px; transition: color .2s; }
+        .fcol ul a:hover { color: var(--gold-light); }
+        .fci { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; margin-bottom: 10px; }
+        .fci-i { opacity: .5; flex-shrink: 0; }
+        .fci a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+        .fci a:hover { color: var(--gold-light); }
+        .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 10px; font-size: 12px; }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
+        /* TOAST */
+        .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1a3d1a; color: white; padding: 14px 28px; border-radius: 8px; font-weight: 700; z-index: 9999; box-shadow: 0 4px 20px rgba(0,0,0,.3); display: none; }
+        .toast.show { display: block; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1100px) {
             .markets-grid { grid-template-columns: repeat(3, 1fr); }
+            .hero h1 { font-size: 46px; }
+            .hero-wrap { gap: 56px; }
         }
-        @media (max-width: 860px) {
-            .nav-toggle { display: flex; }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 72px; left: 0; right: 0;
-                background: white;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 16px 6% 20px;
-                border-bottom: 1px solid var(--border);
-                box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-                gap: 2px;
-            }
-            .nav-links.open { display: flex; }
-            .nav-links li { width: 100%; }
-            .nav-links a { display: block; width: 100%; padding: 10px 14px; font-size: 15px; }
-            .nav-cta { text-align: center; margin-top: 8px; }
-            .hero-inner { grid-template-columns: 1fr; gap: 36px; padding-bottom: 50px; text-align: center; }
-            .hero-left { order: -1; }
-            .hero-emblem-wrap { width: 220px; height: 220px; }
-            .hero h1 { font-size: 36px; }
-            .hero-cta { align-self: center; }
-            .hero-pillars { grid-template-columns: repeat(2, 1fr); }
-            .about-grid { grid-template-columns: 1fr; }
-            .product-grid, .contact-grid { grid-template-columns: 1fr; }
-            .features-grid, .sourcing-grid { grid-template-columns: 1fr 1fr; }
-            .certs-grid { grid-template-columns: 1fr 1fr; }
+        @media (max-width: 900px) {
+            .hamburger { display: flex; }
+            .nav-menu { display: none; position: absolute; top: 72px; left: 0; right: 0; background: white; flex-direction: column; align-items: flex-start; padding: 16px 6% 20px; border-bottom: 1px solid var(--border); box-shadow: 0 8px 24px rgba(0,0,0,.12); gap: 2px; z-index: 190; }
+            .nav-menu.open { display: flex; }
+            .nav-menu li { width: 100%; }
+            .nav-menu a { display: block; width: 100%; padding: 10px 14px; font-size: 15px; }
+            .hero-wrap { grid-template-columns: 1fr; gap: 40px; padding-bottom: 50px; text-align: center; }
+            .hero-right { order: -1; }
+            .hero h1 { font-size: 38px; }
+            .hero-sub { max-width: 100%; }
+            .hero-actions { justify-content: center; }
+            .hero-stats-row { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; gap: 44px; }
+            .product-card { grid-template-columns: 1fr; }
+            .product-visual { min-height: 280px; }
+            .why-grid { grid-template-columns: 1fr 1fr; }
+            .process-steps { grid-template-columns: 1fr 1fr; gap: 30px; }
+            .process-steps::before { display: none; }
             .markets-grid { grid-template-columns: 1fr 1fr; }
-            h2 { font-size: 28px; }
+            .certs-grid { grid-template-columns: 1fr 1fr; }
+            .enquiry-inner { grid-template-columns: 1fr; gap: 44px; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 30px; }
+            .trust-sep { display: none; }
         }
-        @media (max-width: 520px) {
-            .hero h1 { font-size: 30px; }
-            .hero-pillars { grid-template-columns: repeat(2, 1fr); }
-            .features-grid, .sourcing-grid { grid-template-columns: 1fr; }
-            .certs-grid { grid-template-columns: 1fr 1fr; }
-            .markets-grid { grid-template-columns: 1fr 1fr; }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .hero-emblem { width: 240px; height: 240px; }
+            .why-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
             .about-stats { grid-template-columns: 1fr 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 36px; }
+            .section { padding: 70px 5%; }
+            .enquiry-bg { padding: 70px 5%; }
         }
-        @media (max-width: 360px) {
-            .hero h1 { font-size: 26px; }
+        @media (max-width: 400px) {
+            .hero h1 { font-size: 27px; }
             .markets-grid { grid-template-columns: 1fr; }
             .certs-grid { grid-template-columns: 1fr; }
         }
@@ -363,265 +338,255 @@
 </head>
 <body>
 
-<!-- Skip link for accessibility -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip">Skip to main content</a>
 
-<!-- NAV -->
 <nav aria-label="Main navigation">
-    <a href="/" class="logo" aria-label="ASGT India - Home">
+    <a href="/" class="logo" aria-label="ASGT India — Home">
         <div class="logo-bar" aria-hidden="true"></div>
         <div class="logo-text">
             <span class="logo-asgt">ASGT</span>
             <div class="logo-india-row">
                 <span class="logo-india">INDIA</span>
-                <span class="logo-arrow-gold" aria-hidden="true">&#8594;</span>
+                <span class="logo-arrow" aria-hidden="true">&#8594;</span>
             </div>
-            <span class="logo-tagline-nav">Advanced Supply &middot; Global Transit</span>
         </div>
     </a>
-
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
     </button>
-
-    <ul class="nav-links" id="nav-links" role="list">
+    <ul class="nav-menu" id="nav-menu" role="list">
         <li><a href="#about">About</a></li>
-        <li><a href="#product">Products</a></li>
-        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#why-us">Why ASGT</a></li>
         <li><a href="#markets">Markets</a></li>
         <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
     </ul>
 </nav>
 
-<!-- MAIN CONTENT -->
 <main id="main-content">
 
-<!-- HERO -->
-<section class="hero" aria-label="Hero section">
-    <div class="hero-inner">
-        <!-- Premium Emblem -->
+<section class="hero" aria-label="Hero — ASGT India Export Trading">
+    <div class="hero-wrap">
         <div class="hero-left">
-            <div class="hero-emblem-wrap">
-                <img src="/asgt-emblem.svg" alt="ASGT India Premium Emblem — Advanced Supply Global Transit" width="300" height="300" style="width:100%;height:100%;">
+            <span class="hero-badge">&#127998; Maharashtra, India &nbsp;&middot;&nbsp; Export Trading Company</span>
+            <h1>Premium Dehydrated<em>Onion Powder</em></h1>
+            <p class="hero-sub">Sourced from India&rsquo;s Nashik&ndash;Lasalgaon belt &mdash; the world&rsquo;s largest onion-growing region. NABL-tested, fully documented, and shipped FOB Mumbai to buyers worldwide.</p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn-gold">Request a Quote &#8594;</a>
+                <a href="https://wa.me/919142515515" class="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ASGT India">&#128242; WhatsApp Us</a>
             </div>
         </div>
-
-        <!-- Hero text -->
         <div class="hero-right">
-            <p class="hero-tagline">Advanced Supply &nbsp;&middot;&nbsp; Global Transit</p>
-            <h1>ADVANCED SUPPLY<span>GLOBAL TRANSIT</span></h1>
-            <p class="hero-subtitle">Reliable Products. Trusted Partnerships. Global Reach. &mdash; Premium dehydrated onion powder from Maharashtra&rsquo;s Nashik&ndash;Lasalgaon belt, export-ready with full documentation.</p>
-            <a href="mailto:info@asglobaltrade.in?subject=Inquiry%3A%20Dehydrated%20Onion%20Powder&body=Company%20Name%3A%0ACountry%3A%0ARequired%20Grade%2FMesh%3A%0AQuantity%3A%0ADestination%20Port%3A%0ACertifications%20Required%3A"
-               class="hero-cta" aria-label="Request a quote by email">
-                Request a Quote &#8594;
-            </a>
+            <div class="hero-emblem">
+                <img src="/asgt-emblem.svg" alt="ASGT India — Advanced Supply Global Transit Premium Emblem" width="320" height="320">
+            </div>
         </div>
     </div>
-
-    <!-- Bottom pillars -->
-    <div class="hero-pillars" aria-label="Key strengths">
-        <div class="pillar">
-            <div class="pillar-icon" aria-hidden="true">&#127760;</div>
-            <div class="pillar-label">Global Reach</div>
-        </div>
-        <div class="pillar">
-            <div class="pillar-icon" aria-hidden="true">&#128230;</div>
-            <div class="pillar-label">Reliable Solutions</div>
-        </div>
-        <div class="pillar">
-            <div class="pillar-icon" aria-hidden="true">&#128674;</div>
-            <div class="pillar-label">Smooth Transit</div>
-        </div>
-        <div class="pillar">
-            <div class="pillar-icon" aria-hidden="true">&#129309;</div>
-            <div class="pillar-label">Trusted Partnerships</div>
+    <div class="hero-stats" aria-label="Key highlights">
+        <div class="hero-stats-row">
+            <div class="hstat"><div class="hstat-num">1 MT+</div><div class="hstat-label">Min. Trial Order</div></div>
+            <div class="hstat"><div class="hstat-num">24 hrs</div><div class="hstat-label">Quote Response</div></div>
+            <div class="hstat"><div class="hstat-num">FOB</div><div class="hstat-label">Mumbai &mdash; JNPT</div></div>
+            <div class="hstat"><div class="hstat-num">NABL</div><div class="hstat-label">Lab-Tested Quality</div></div>
         </div>
     </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-bg" id="about" aria-labelledby="about-heading">
-    <div class="section-wrap">
+<div class="trust-bar" role="complementary" aria-label="Credentials">
+    <div class="trust-inner">
+        <div class="trust-item"><span class="trust-icon">&#127979;</span><span>Udyam MSME &nbsp;<strong>UDYAM-MH-01-0300536</strong></span></div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item"><span class="trust-icon">&#128230;</span><span>FOB Dispatch &nbsp;<strong>JNPT Mumbai</strong></span></div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item"><span class="trust-icon">&#128302;</span><span>NABL-Accredited &nbsp;<strong>Lab Testing</strong></span></div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item"><span class="trust-icon">&#128196;</span><span>Complete &nbsp;<strong>Export Documentation</strong></span></div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item"><span class="trust-icon">&#127807;</span><span>Nashik&ndash;Lasalgaon &nbsp;<strong>Verified Source</strong></span></div>
+    </div>
+</div>
+
+<section class="section about-bg" id="about" aria-labelledby="about-h">
+    <div class="section-inner">
         <div class="section-label">About ASGT India</div>
-        <h2 id="about-heading">India-Based Export Trading Company</h2>
+        <h2 class="section-title" id="about-h">India&rsquo;s Dedicated Onion Powder Export Partner</h2>
         <div class="about-grid">
             <div class="about-text">
-                <p>ASGT India (Advanced Supply &middot; Global Transit) is a registered export trading company based in Ahmednagar, Maharashtra, India. We specialise in sourcing, quality verification, and export of dehydrated onion powder to international importers, food manufacturers, and distributors.</p>
-                <p>We act as a dedicated export partner &mdash; bridging verified Indian processors with global buyers who require consistent quality, complete export documentation, and reliable supply timelines. Every supplier in our network is physically visited and scored before selection.</p>
-                <p>Registered under the Government of India&rsquo;s Udyam MSME scheme (UDYAM-MH-01-0300536). Goods are dispatched FOB Mumbai (JNPT), with full export documentation managed in-house.</p>
+                <p>ASGT India &mdash; Advanced Supply &middot; Global Transit &mdash; is a registered export trading company based in Ahmednagar, Maharashtra. We specialise in sourcing, quality verification, and export of dehydrated onion powder to international importers, food manufacturers, and distributors.</p>
+                <p>As a focused trading company, we act as a dedicated bridge between verified Indian processors and global buyers. Every supplier in our network is physically visited, audited, and scored before selection. We handle full export documentation in-house, eliminating the complexity and uncertainty often faced by international buyers when sourcing from India.</p>
+                <p>Registered under India&rsquo;s Udyam MSME scheme and operating with one clear mandate: deliver export-grade onion powder with full transparency, correct documentation, and reliable supply timelines.</p>
+                <div class="about-badges">
+                    <span class="badge">&#127979; Udyam MSME</span>
+                    <span class="badge">&#128302; NABL Lab Testing</span>
+                    <span class="badge">&#127760; FOB Mumbai</span>
+                    <span class="badge">&#128196; APEDA / Chamber CoO</span>
+                </div>
             </div>
             <div class="about-stats">
-                <div class="about-stat">
-                    <div class="about-stat-num">FOB</div>
-                    <div class="about-stat-label">Mumbai &mdash; JNPT</div>
+                <div class="stat-card">
+                    <div class="stat-num">1 MT+</div>
+                    <div class="stat-label">Minimum Trial<br>Order Size</div>
                 </div>
-                <div class="about-stat">
-                    <div class="about-stat-num">1 MT+</div>
-                    <div class="about-stat-label">Minimum Trial Order</div>
+                <div class="stat-card">
+                    <div class="stat-num">24 hrs</div>
+                    <div class="stat-label">Quote Response<br>Commitment</div>
                 </div>
-                <div class="about-stat">
-                    <div class="about-stat-num">24 hrs</div>
-                    <div class="about-stat-label">Quote Response Time</div>
+                <div class="stat-card">
+                    <div class="stat-num">FOB</div>
+                    <div class="stat-label">Mumbai JNPT<br>Dispatch</div>
                 </div>
-                <div class="about-stat">
-                    <div class="about-stat-num">NABL</div>
-                    <div class="about-stat-label">Lab-Tested Quality</div>
+                <div class="stat-card">
+                    <div class="stat-num">NABL</div>
+                    <div class="stat-label">Accredited Lab<br>Quality Tests</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PRODUCT -->
-<section class="product-bg" id="product" aria-labelledby="product-heading">
-    <div class="section-wrap">
+<section class="section product-bg" id="product" aria-labelledby="product-h">
+    <div class="section-inner">
         <div class="section-label">Our Product</div>
-        <h2 id="product-heading">Dehydrated Onion Powder &mdash; Export Grade</h2>
-        <p class="section-desc">Export-grade onion powder sourced from verified processors in Nashik and Lasalgaon, Maharashtra &mdash; India&rsquo;s leading dehydrated vegetable processing belt.</p>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-card-head">
-                    <h3>Product Specifications</h3>
-                    <p>Standard export grade &middot; Batch-specific COA available</p>
+        <h2 class="section-title" id="product-h">Dehydrated Onion Powder &mdash; Export Grade</h2>
+        <p class="section-desc">Precision-processed onion powder from Maharashtra&rsquo;s premium growing belt. Available in 80&ndash;100 mesh with batch-specific Certificate of Analysis.</p>
+        <div class="product-card">
+            <div class="product-visual">
+                <span class="pv-label">Export Grade</span>
+                <div class="pv-name">Dehydrated<br>Onion Powder</div>
+                <div class="pv-origin">Maharashtra, India &nbsp;&middot;&nbsp; HS: 0712 20 00</div>
+                <div class="pv-tags">
+                    <span class="pv-tag">80&ndash;100 Mesh</span>
+                    <span class="pv-tag">&le;5% Moisture</span>
+                    <span class="pv-tag">18&ndash;24M Shelf Life</span>
+                    <span class="pv-tag">NABL Tested</span>
                 </div>
-                <div class="spec-row"><span class="spec-label">Product</span><span class="spec-value">Dehydrated Onion Powder</span></div>
-                <div class="spec-row"><span class="spec-label">HS Code</span><span class="spec-value">0712 20 00</span></div>
-                <div class="spec-row"><span class="spec-label">Mesh Size</span><span class="spec-value">80&ndash;100 mesh (custom on request)</span></div>
-                <div class="spec-row"><span class="spec-label">Moisture</span><span class="spec-value">&le; 5%</span></div>
-                <div class="spec-row"><span class="spec-label">Color</span><span class="spec-value">Cream to light tan</span></div>
-                <div class="spec-row"><span class="spec-label">Ingredients</span><span class="spec-value">100% Dehydrated Onion</span></div>
-                <div class="spec-row"><span class="spec-label">Shelf Life</span><span class="spec-value">18&ndash;24 months from manufacturing</span></div>
-                <div class="spec-row"><span class="spec-label">Origin</span><span class="spec-value">India (Maharashtra)</span></div>
             </div>
-            <div class="product-side">
-                <h3>Packing Options</h3>
-                <p>We supply in buyer-specified packaging. Standard and custom packing available on request.</p>
-                <div class="pack-tags" aria-label="Available packaging options">
-                    <span class="pack-tag">25 kg HDPE Bag</span>
-                    <span class="pack-tag">20 kg Craft Bag</span>
-                    <span class="pack-tag">Custom Packing</span>
-                    <span class="pack-tag">Private Label</span>
+            <div class="product-details">
+                <h3>Product Specifications</h3>
+                <p class="product-hs">HS Code: 0712 20 00 &nbsp;&middot;&nbsp; Batch-specific COA available on request</p>
+                <table class="specs-table" aria-label="Product specifications">
+                    <tr><td class="sk">Mesh Size</td><td class="sv">80&ndash;100 mesh (custom on request)</td></tr>
+                    <tr><td class="sk">Moisture Content</td><td class="sv">&le; 5%</td></tr>
+                    <tr><td class="sk">Color</td><td class="sv">Cream to light tan</td></tr>
+                    <tr><td class="sk">Ingredients</td><td class="sv">100% Dehydrated Onion</td></tr>
+                    <tr><td class="sk">Shelf Life</td><td class="sv">18&ndash;24 months from manufacturing</td></tr>
+                    <tr><td class="sk">Country of Origin</td><td class="sv">India (Maharashtra)</td></tr>
+                    <tr><td class="sk">Standard Packing</td><td class="sv">25 kg HDPE bag &nbsp;/&nbsp; 20 kg craft bag</td></tr>
+                    <tr><td class="sk">Minimum Order</td><td class="sv">1 MT (Trial) &nbsp;&middot;&nbsp; Commercial qty on request</td></tr>
+                    <tr><td class="sk">Incoterms</td><td class="sv">FOB Mumbai &nbsp;&middot;&nbsp; CFR / CIF on request</td></tr>
+                </table>
+                <div class="product-actions">
+                    <a href="/products/dehydrated-onion-powder/" class="btn-navy">Full Product Details &#8594;</a>
+                    <a href="#contact" class="btn-navy-outline">Request Sample</a>
                 </div>
-                <h3>Minimum Order</h3>
-                <p>Trial orders from 1 MT. Commercial quantities available with lead time confirmation from our supplier network.</p>
-                <h3>Incoterms</h3>
-                <p>We quote <strong>FOB Mumbai</strong>. CFR / CIF available on request for major international destination ports.</p>
-                <h3>Sample Policy</h3>
-                <p>Evaluation samples available for qualified buyers. Contact us to discuss sample and courier arrangements.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- WHY US -->
-<section class="why-bg" id="why-us" aria-labelledby="whyus-heading">
-    <div class="section-wrap">
+<section class="section why-bg" id="why-us" aria-labelledby="why-h">
+    <div class="section-inner">
         <div class="section-label">Why Choose ASGT India</div>
-        <h2 id="whyus-heading">Reliable Products. Trusted Partnerships. Global Reach.</h2>
+        <h2 class="section-title section-title-white" id="why-h">Reliable Products. Trusted Partnerships.</h2>
         <p class="section-desc">We handle sourcing, quality verification, documentation, and logistics so you receive consistent quality with minimal back-and-forth.</p>
-        <div class="features-grid">
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#127807;</div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">&#127807;</div>
                 <h4>Source-Verified Supply</h4>
                 <p>We physically visit and score processors before selection. Only verified suppliers with demonstrated export capability make it into our network.</p>
             </div>
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#128302;</div>
+            <div class="why-card">
+                <div class="why-icon">&#128302;</div>
                 <h4>NABL Lab-Tested Quality</h4>
                 <p>Products tested at NABL-accredited laboratories. Full COA covering moisture, color, mesh, and microbial parameters available per batch.</p>
             </div>
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#128230;</div>
+            <div class="why-card">
+                <div class="why-icon">&#128230;</div>
                 <h4>Buyer-Specific Packing</h4>
                 <p>Pack to your specification &mdash; bag size, labeling, and branding as required. We coordinate directly with the processor on your behalf.</p>
             </div>
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#128196;</div>
+            <div class="why-card">
+                <div class="why-icon">&#128196;</div>
                 <h4>Complete Documentation</h4>
-                <p>Commercial invoice, packing list, COA, Certificate of Origin, Phytosanitary certificate, and all required shipping documents handled in-house.</p>
+                <p>Commercial invoice, packing list, COA, Certificate of Origin, Phytosanitary certificate, and all shipping documents handled in-house.</p>
             </div>
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#128674;</div>
-                <h4>FOB Mumbai Shipment</h4>
-                <p>Goods dispatched from JNPT Mumbai &mdash; one of Asia&rsquo;s largest container ports with direct shipping connections to all major import destinations.</p>
+            <div class="why-card">
+                <div class="why-icon">&#128674;</div>
+                <h4>FOB Mumbai Dispatch</h4>
+                <p>Goods dispatched from JNPT Mumbai &mdash; Asia&rsquo;s largest container port with direct connections to all major import destinations worldwide.</p>
             </div>
-            <div class="feat">
-                <div class="feat-icon" aria-hidden="true">&#128172;</div>
-                <h4>Dedicated Export Manager</h4>
-                <p>One point of contact from inquiry to delivery. Regular updates at every stage &mdash; quote, procurement, dispatch, and arrival confirmation.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="certs-bg" id="certs" aria-labelledby="certs-heading">
-    <div class="section-wrap">
-        <div class="section-label">Documentation &amp; Compliance</div>
-        <h2 id="certs-heading">Certifications &amp; Documents</h2>
-        <p class="section-desc">Please confirm your specific requirements when enquiring &mdash; we will verify availability and include in your quotation.</p>
-        <div class="certs-grid">
-            <div class="cert"><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="badge-avail">Available</span></div>
-            <div class="cert"><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="badge-avail">Available</span></div>
-            <div class="cert"><h5>Certificate of Origin</h5><p>Issued by APEDA / Chamber</p><span class="badge-avail">Available</span></div>
-            <div class="cert"><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="badge-avail">Available</span></div>
-            <div class="cert"><h5>FSSAI License</h5><p>India food safety compliance</p><span class="badge-req">On Request</span></div>
-            <div class="cert"><h5>Halal Certificate</h5><p>Muslim-majority market buyers</p><span class="badge-req">On Request</span></div>
-            <div class="cert"><h5>Allergen Declaration</h5><p>Product allergen statement</p><span class="badge-req">On Request</span></div>
-            <div class="cert"><h5>Pesticide / Heavy Metals</h5><p>Residue and contaminant report</p><span class="badge-req">On Request</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- SOURCING -->
-<section class="sourcing-bg" id="sourcing" aria-labelledby="sourcing-heading">
-    <div class="section-wrap">
-        <div class="section-label">Our Sourcing Advantage</div>
-        <h2 id="sourcing-heading">India&rsquo;s Finest Onion-Growing Belt</h2>
-        <p class="section-desc">Maharashtra&rsquo;s Nashik and Lasalgaon districts account for the majority of India&rsquo;s dehydrated onion production. We source directly from verified processors in this belt.</p>
-        <div class="sourcing-grid">
-            <div class="source-card">
-                <h4>Nashik District</h4>
-                <p>Maharashtra&rsquo;s primary onion-growing region. High-quality Kharif and Rabi crop. Known for optimal pungency and dry matter content &mdash; ideal for dehydration processing.</p>
-            </div>
-            <div class="source-card">
-                <h4>Lasalgaon Mandi</h4>
-                <p>Asia&rsquo;s largest onion wholesale market. We monitor prices regularly to ensure competitive and stable supply pricing for our international buyers.</p>
-            </div>
-            <div class="source-card">
-                <h4>Verified Processors</h4>
-                <p>All suppliers are physically visited and scored on quality, documentation capability, production capacity, and export readiness before selection.</p>
+            <div class="why-card">
+                <div class="why-icon">&#128172;</div>
+                <h4>Single Point of Contact</h4>
+                <p>One export manager from inquiry to delivery. Regular updates at every stage &mdash; quote, procurement, dispatch, and arrival confirmation.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- EXPORT MARKETS -->
-<section class="markets-bg" id="markets" aria-labelledby="markets-heading">
-    <div class="section-wrap">
+<section class="section process-bg" id="process" aria-labelledby="process-h">
+    <div class="section-inner">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title" id="process-h">From Inquiry to Delivery in 5 Steps</h2>
+        <p class="section-desc">Our end-to-end process ensures transparency, speed, and reliability at every stage of your order.</p>
+        <div class="process-steps" role="list">
+            <div class="step" role="listitem">
+                <div class="step-num">1</div>
+                <h4>Send Enquiry</h4>
+                <p>Share quantity, grade, packing, destination port and certifications required.</p>
+            </div>
+            <div class="step" role="listitem">
+                <div class="step-num">2</div>
+                <h4>Receive Quote</h4>
+                <p>We respond within 24 hours with pricing, availability and documentation confirmation.</p>
+            </div>
+            <div class="step" role="listitem">
+                <div class="step-num">3</div>
+                <h4>Sample Approval</h4>
+                <p>Physical sample dispatched for qualified buyers. Lab COA provided alongside.</p>
+            </div>
+            <div class="step" role="listitem">
+                <div class="step-num">4</div>
+                <h4>Order Confirmation</h4>
+                <p>Proforma invoice issued. Order scheduled with verified processor upon deposit.</p>
+            </div>
+            <div class="step" role="listitem">
+                <div class="step-num">5</div>
+                <h4>Dispatch &amp; Docs</h4>
+                <p>Goods dispatched FOB JNPT Mumbai. Full document set shared immediately on shipment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section markets-bg" id="markets" aria-labelledby="markets-h">
+    <div class="section-inner">
         <div class="section-label">Export Markets</div>
-        <h2 id="markets-heading">Serving Buyers Across Key Markets</h2>
+        <h2 class="section-title" id="markets-h">Serving Buyers Across Key Markets</h2>
         <p class="section-desc">We actively serve buyers in Southeast Asia, South Asia, and Western markets. If your country is not listed, contact us &mdash; we ship globally from JNPT Mumbai.</p>
         <div class="markets-grid">
             <div class="market-card">
+                <span class="market-flag">&#127470;&#127465;</span>
                 <h4>Indonesia</h4>
                 <p>Priority market. High demand in food processing, instant noodles, and seasoning. FOB and CIF Jakarta available.</p>
             </div>
             <div class="market-card">
+                <span class="market-flag">&#127474;&#127486;</span>
                 <h4>Malaysia</h4>
                 <p>Active market for dehydrated vegetables. Halal certification available on request for Muslim-majority buyer requirements.</p>
             </div>
             <div class="market-card">
+                <span class="market-flag">&#127463;&#127465;</span>
                 <h4>Bangladesh</h4>
                 <p>Growing food processing sector with strong demand for quality onion powder. Competitive pricing with full documentation.</p>
             </div>
             <div class="market-card">
+                <span class="market-flag">&#127468;&#127463;</span>
                 <h4>United Kingdom</h4>
                 <p>Premium quality buyers. Full documentation including allergen declarations and pesticide residue reports available.</p>
             </div>
             <div class="market-card">
+                <span class="market-flag">&#127482;&#127480;</span>
                 <h4>United States</h4>
                 <p>Serving food manufacturers and spice distributors. FDA-compatible documentation and bulk onion powder supply available.</p>
             </div>
@@ -629,123 +594,195 @@
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" aria-labelledby="contact-heading">
-    <div class="section-wrap">
-        <div class="section-label">Contact Us</div>
-        <h2 id="contact-heading">Request a Quote or Sample</h2>
-        <p class="section-desc">Share your requirement and we will respond within 24 hours with a quotation or sample dispatch details.</p>
-        <div class="contact-grid">
-            <div>
-                <div class="contact-item">
-                    <div class="c-icon" aria-hidden="true">&#9993;</div>
-                    <div class="c-text">
-                        <strong>General Inquiries</strong>
-                        <a href="mailto:info@asglobaltrade.in" aria-label="Email us at info@asglobaltrade.in">info@asglobaltrade.in</a>
+<section class="section certs-bg" id="certs" aria-labelledby="certs-h">
+    <div class="section-inner">
+        <div class="section-label">Documentation &amp; Compliance</div>
+        <h2 class="section-title" id="certs-h">Certifications &amp; Documents</h2>
+        <p class="section-desc">Confirm your specific requirements when enquiring &mdash; we will verify availability and include in your quotation.</p>
+        <div class="certs-grid">
+            <div class="cert-card"><span class="cert-icon">&#128196;</span><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127979;</span><h5>Certificate of Origin</h5><p>Issued by APEDA / Chamber</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127807;</span><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127829;</span><h5>FSSAI License</h5><p>India food safety compliance</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#9733;</span><h5>Halal Certificate</h5><p>Muslim-majority market buyers</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#9888;</span><h5>Allergen Declaration</h5><p>Product allergen statement</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#128270;</span><h5>Pesticide / Heavy Metals</h5><p>Residue and contaminant report</p><span class="pill-req">On Request</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="enquiry-bg" id="contact" aria-labelledby="contact-h">
+    <div class="enquiry-inner">
+        <div class="enquiry-left">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title section-title-white" id="contact-h">Request a Quote or Sample</h2>
+            <p>Share your requirement and we will respond within 24 hours with a quotation, sample dispatch details, or any additional information you need.</p>
+            <div class="ec-list">
+                <div class="ec-item">
+                    <div class="ec-icon">&#9993;</div>
+                    <div>
+                        <div class="ec-label">General Inquiries</div>
+                        <div class="ec-val"><a href="mailto:info@asglobaltrade.in">info@asglobaltrade.in</a></div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="c-icon" aria-hidden="true">&#128100;</div>
-                    <div class="c-text">
-                        <strong>Export Manager</strong>
-                        <a href="mailto:rahil@asglobaltrade.in" aria-label="Email export manager at rahil@asglobaltrade.in">rahil@asglobaltrade.in</a>
+                <div class="ec-item">
+                    <div class="ec-icon">&#128100;</div>
+                    <div>
+                        <div class="ec-label">Export Manager</div>
+                        <div class="ec-val"><a href="mailto:rahil@asglobaltrade.in">rahil@asglobaltrade.in</a></div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="c-icon" aria-hidden="true">&#128241;</div>
-                    <div class="c-text">
-                        <strong>WhatsApp</strong>
-                        <a href="https://wa.me/919142515515" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us at +91 91425 15515">+91 91425 15515</a>
+                <div class="ec-item">
+                    <div class="ec-icon">&#128242;</div>
+                    <div>
+                        <div class="ec-label">WhatsApp</div>
+                        <div class="ec-val"><a href="https://wa.me/919142515515" target="_blank" rel="noopener noreferrer">+91 91425 15515</a></div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="c-icon" aria-hidden="true">&#128205;</div>
-                    <div class="c-text">
-                        <strong>Location</strong>
-                        <span>Ahmednagar, Maharashtra, India &mdash; 414001</span>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="c-icon" aria-hidden="true">&#127963;</div>
-                    <div class="c-text">
-                        <strong>Udyam Registration</strong>
-                        <span>UDYAM-MH-01-0300536</span>
+                <div class="ec-item">
+                    <div class="ec-icon">&#128205;</div>
+                    <div>
+                        <div class="ec-label">Office Location</div>
+                        <div class="ec-val"><span>Ahmednagar, Maharashtra, India &mdash; 414001</span></div>
                     </div>
                 </div>
             </div>
-            <div class="inquiry-box">
-                <h3>To Get an Accurate Quote, Share:</h3>
-                <p>Send these details to <a href="mailto:info@asglobaltrade.in" style="color:var(--navy);font-weight:600;">info@asglobaltrade.in</a></p>
-                <ul class="req-list" aria-label="Required information for a quote">
-                    <li>Required grade / mesh size</li>
-                    <li>Quantity (trial or commercial)</li>
-                    <li>Preferred packaging size</li>
-                    <li>Destination port or city</li>
-                    <li>Certifications or documents required</li>
-                    <li>Target price (optional)</li>
-                </ul>
-                <a href="mailto:info@asglobaltrade.in?subject=Dehydrated%20Onion%20Powder%20Inquiry&body=Company%20Name%3A%0ACountry%3A%0ARequired%20Grade%2FMesh%20Size%3A%0AQuantity%20Needed%3A%0APackaging%20Size%3A%0ADestination%20Port%3A%0ACertifications%20Required%3A%0ATarget%20Price%20(optional)%3A"
-                   class="cta-btn" aria-label="Send inquiry email">
-                    Send Inquiry by Email &#8594;
-                </a>
-            </div>
+        </div>
+        <div class="enquiry-form-box">
+            <h3>Send Your Enquiry</h3>
+            <p>We respond within 24 hours on business days.</p>
+            <!-- FormSubmit: on first submission, check info@asglobaltrade.in inbox for activation email and click confirm -->
+            <form action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="New Enquiry — ASGT India Website">
+                <input type="hidden" name="_next" value="https://asglobaltrade.in/?sent=1">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="form-row">
+                    <div class="fg">
+                        <label for="f-name">Full Name *</label>
+                        <input type="text" id="f-name" name="name" required placeholder="Your name" autocomplete="name">
+                    </div>
+                    <div class="fg">
+                        <label for="f-company">Company Name *</label>
+                        <input type="text" id="f-company" name="company" required placeholder="Your company" autocomplete="organization">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="fg">
+                        <label for="f-email">Email Address *</label>
+                        <input type="email" id="f-email" name="email" required placeholder="you@company.com" autocomplete="email">
+                    </div>
+                    <div class="fg">
+                        <label for="f-country">Country</label>
+                        <input type="text" id="f-country" name="country" placeholder="Your country" autocomplete="country-name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="fg">
+                        <label for="f-qty">Quantity Required</label>
+                        <input type="text" id="f-qty" name="quantity" placeholder="e.g. 5 MT, 10 MT">
+                    </div>
+                    <div class="fg">
+                        <label for="f-port">Destination Port</label>
+                        <input type="text" id="f-port" name="destination_port" placeholder="e.g. Jakarta, Chittagong">
+                    </div>
+                </div>
+                <div class="fg">
+                    <label for="f-certs">Certifications / Documents Required</label>
+                    <input type="text" id="f-certs" name="certifications" placeholder="e.g. Halal, Allergen Declaration, COA">
+                </div>
+                <div class="fg">
+                    <label for="f-msg">Additional Notes</label>
+                    <textarea id="f-msg" name="message" placeholder="Packing requirements, grade, target price, or any other details&hellip;"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Enquiry &#8594;</button>
+                <p class="form-note">&#128274; Your information is used solely for responding to your inquiry.</p>
+            </form>
         </div>
     </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer role="contentinfo">
     <div class="footer-inner">
-        <div class="foot-brand">
-            <div class="foot-bar" aria-hidden="true"></div>
-            <div>
-                <div class="foot-asgt">ASGT</div>
-                <div class="foot-india">INDIA &nbsp;&#8594;</div>
-                <div class="foot-reg">Advanced Supply &middot; Global Transit &nbsp;&middot;&nbsp; Udyam: UDYAM-MH-01-0300536</div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="foot-logo">
+                    <div class="foot-bar" aria-hidden="true"></div>
+                    <div>
+                        <div class="foot-asgt">ASGT</div>
+                        <div class="foot-india">INDIA &#8594;</div>
+                    </div>
+                </div>
+                <p>Advanced Supply &middot; Global Transit &mdash; An export trading company dedicated to reliable supply of premium dehydrated onion powder from Maharashtra, India to buyers worldwide.</p>
+                <div class="freg">Udyam: UDYAM-MH-01-0300536 &nbsp;&middot;&nbsp; Ahmednagar, Maharashtra &mdash; 414001</div>
+            </div>
+            <div class="fcol">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About ASGT India</a></li>
+                    <li><a href="#product">Our Product</a></li>
+                    <li><a href="/products/dehydrated-onion-powder/">Product Details</a></li>
+                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#markets">Export Markets</a></li>
+                    <li><a href="#certs">Certifications</a></li>
+                    <li><a href="#contact">Get a Quote</a></li>
+                </ul>
+            </div>
+            <div class="fcol">
+                <h4>Contact</h4>
+                <div class="fci"><span class="fci-i">&#9993;</span><a href="mailto:info@asglobaltrade.in">info@asglobaltrade.in</a></div>
+                <div class="fci"><span class="fci-i">&#128100;</span><a href="mailto:rahil@asglobaltrade.in">rahil@asglobaltrade.in</a></div>
+                <div class="fci"><span class="fci-i">&#128242;</span><a href="https://wa.me/919142515515" target="_blank" rel="noopener noreferrer">+91 91425 15515</a></div>
+                <div class="fci"><span class="fci-i">&#128205;</span><span>Ahmednagar, Maharashtra, India</span></div>
             </div>
         </div>
-        <div class="footer-links">
-            <a href="mailto:info@asglobaltrade.in">info@asglobaltrade.in</a>
-            <a href="https://wa.me/919142515515" target="_blank" rel="noopener noreferrer">+91 91425 15515</a>
-            <a href="#contact">Get a Quote</a>
+        <div class="footer-bottom">
+            <span>&copy; 2026 ASGT India (Advanced Supply &middot; Global Transit). All rights reserved.</span>
+            <span>Dehydrated Onion Powder Exporter &nbsp;&middot;&nbsp; Maharashtra, India</span>
         </div>
-        <div class="footer-copy">&copy; 2026 ASGT India. All rights reserved.</div>
     </div>
 </footer>
 
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-    // Mobile navigation toggle
-    (function() {
-        var toggle = document.getElementById('nav-toggle');
-        var links = document.getElementById('nav-links');
-        if (!toggle || !links) return;
-
-        toggle.addEventListener('click', function() {
-            var isOpen = links.classList.toggle('open');
-            toggle.classList.toggle('active', isOpen);
-            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+(function () {
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('nav-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            btn.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', String(open));
         });
-
-        // Close nav when a link is clicked on mobile
-        links.querySelectorAll('a').forEach(function(a) {
-            a.addEventListener('click', function() {
-                links.classList.remove('open');
-                toggle.classList.remove('active');
-                toggle.setAttribute('aria-expanded', 'false');
+        menu.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                menu.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
             });
         });
-
-        // Close nav on outside click
-        document.addEventListener('click', function(e) {
-            if (!toggle.contains(e.target) && !links.contains(e.target)) {
-                links.classList.remove('open');
-                toggle.classList.remove('active');
-                toggle.setAttribute('aria-expanded', 'false');
+        document.addEventListener('click', function (e) {
+            if (!btn.contains(e.target) && !menu.contains(e.target)) {
+                menu.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
             }
         });
-    })();
+    }
+    if (window.location.search.indexOf('sent=1') !== -1) {
+        var t = document.getElementById('toast');
+        if (t) {
+            t.textContent = '✓ Enquiry sent! We’ll respond within 24 hours.';
+            t.classList.add('show');
+            setTimeout(function () { t.classList.remove('show'); }, 6000);
+            history.replaceState(null, '', window.location.pathname);
+        }
+    }
+}());
 </script>
 
 </body>
