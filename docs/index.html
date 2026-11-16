@@ -315,8 +315,9 @@
             .nav-menu.open { display: flex; }
             .nav-menu li { width: 100%; }
             .nav-menu a { display: block; width: 100%; padding: 10px 14px; font-size: 15px; }
-            .hero-wrap { grid-template-columns: 1fr; gap: 40px; padding-bottom: 50px; text-align: center; }
+            .hero-wrap { grid-template-columns: 1fr; gap: 36px; padding-bottom: 50px; text-align: center; }
             .hero-right { order: -1; }
+            .hero-emblem { width: 280px; height: 280px; }
             .hero h1 { font-size: 38px; }
             .hero-sub { max-width: 100%; }
             .hero-actions { justify-content: center; }
@@ -333,20 +334,32 @@
             .footer-top { grid-template-columns: 1fr 1fr; }
             .section-title { font-size: 30px; }
             .trust-sep { display: none; }
+            .trust-inner { justify-content: center; gap: 14px 24px; }
+            .trust-item { white-space: normal; font-size: 12px; }
         }
         @media (max-width: 600px) {
+            .hero { padding-top: 52px; }
             .hero h1 { font-size: 32px; }
-            .hero-emblem { width: 240px; height: 240px; border-radius: 50%; overflow: hidden; }
+            .hero-emblem { width: 220px; height: 220px; }
+            .hero-sub { font-size: 15px; }
+            .hero-actions { flex-direction: column; align-items: center; gap: 10px; }
+            .btn-gold, .btn-wa { width: 100%; max-width: 280px; justify-content: center; }
+            .hstat-num { font-size: 22px; }
+            .hstat { padding: 18px 12px; }
+            .trust-bar { display: none; }
             .why-grid { grid-template-columns: 1fr; }
             .process-steps { grid-template-columns: 1fr; }
             .about-stats { grid-template-columns: 1fr 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .footer-top { grid-template-columns: 1fr; gap: 36px; }
-            .section { padding: 70px 5%; }
-            .enquiry-bg { padding: 70px 5%; }
+            .section { padding: 60px 5%; }
+            .enquiry-bg { padding: 60px 5%; }
+            .success-card { padding: 36px 24px; }
+            .success-check { width: 60px; height: 60px; font-size: 26px; }
         }
         @media (max-width: 400px) {
-            .hero h1 { font-size: 27px; }
+            .hero h1 { font-size: 26px; }
+            .hero-emblem { width: 190px; height: 190px; }
             .markets-grid { grid-template-columns: 1fr; }
             .certs-grid { grid-template-columns: 1fr; }
         }
@@ -666,6 +679,7 @@
                 <input type="hidden" name="_subject" value="New Enquiry — ASGT India Website">
                 <input type="hidden" name="_next" value="https://asglobaltrade.in/?sent=1">
                 <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_autoresponse" value="Hi, thanks for writing in - just picked up your message. I'm Rahil, managing export inquiries at ASGT India. I'll go through your requirement and come back to you with pricing and availability details. If anything is urgent, feel free to WhatsApp me directly: +91 91425 15515. Talk soon, Rahil | Export Manager - ASGT India | rahil@asglobaltrade.in | www.asglobaltrade.in">
                 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <div class="form-row">
                     <div class="fg">
