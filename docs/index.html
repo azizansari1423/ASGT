@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -278,9 +278,20 @@
         .fci a:hover { color: var(--gold-light); }
         .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 24px; flex-wrap: wrap; gap: 10px; font-size: 12px; }
 
-        /* TOAST */
-        .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #1a3d1a; color: white; padding: 14px 28px; border-radius: 8px; font-weight: 700; z-index: 9999; box-shadow: 0 4px 20px rgba(0,0,0,.3); display: none; }
-        .toast.show { display: block; }
+        /* SUCCESS MODAL */
+        .success-overlay { display: none; position: fixed; inset: 0; background: rgba(6,15,30,.88); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .success-overlay.show { display: flex; }
+        .success-card { background: white; border-radius: 20px; padding: 52px 44px; max-width: 500px; width: 100%; text-align: center; box-shadow: 0 24px 72px rgba(0,0,0,.45); }
+        .success-check { width: 76px; height: 76px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 34px; color: #2e7d32; font-weight: 900; }
+        .success-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+        .success-card .success-msg { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 10px; }
+        .success-card .success-msg strong { color: var(--navy); }
+        .success-divider { height: 1px; background: var(--border); margin: 20px 0; }
+        .success-alt { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.7; }
+        .success-alt a { color: var(--navy); font-weight: 600; text-decoration: none; }
+        .success-alt a:hover { text-decoration: underline; }
+        .success-btn { display: inline-block; background: var(--navy); color: white; font-weight: 700; font-size: 15px; padding: 14px 36px; border-radius: 8px; border: none; cursor: pointer; font-family: inherit; transition: background .2s; }
+        .success-btn:hover { background: var(--navy-dark); }
 
         /* RESPONSIVE */
         @media (max-width: 1100px) {
@@ -358,7 +369,7 @@
         <div class="hero-left">
             <span class="hero-badge">&#127998; Maharashtra, India &nbsp;&middot;&nbsp; Export Trading Company</span>
             <h1>Premium Dehydrated<em>Onion Powder</em></h1>
-            <p class="hero-sub">Sourced from India&rsquo;s Nashik&ndash;Lasalgaon belt &mdash; the world&rsquo;s largest onion-growing region. Quality-verified, fully documented, and shipped FOB Mumbai to buyers worldwide.</p>
+            <p class="hero-sub">Sourced from India&rsquo;s Nashik&ndash;Lasalgaon belt - the world&rsquo;s largest onion-growing region. Quality-verified, fully documented, and shipped FOB Mumbai to buyers worldwide.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn-gold">Request a Quote &#8594;</a>
                 <a href="https://wa.me/919142515515" class="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ASGT India">&#128242; WhatsApp Us</a>
@@ -374,7 +385,7 @@
         <div class="hero-stats-row">
             <div class="hstat"><div class="hstat-num">1 MT+</div><div class="hstat-label">Min. Trial Order</div></div>
             <div class="hstat"><div class="hstat-num">1 Day</div><div class="hstat-label">Quote Turnaround</div></div>
-            <div class="hstat"><div class="hstat-num">FOB</div><div class="hstat-label">Mumbai &mdash; JNPT</div></div>
+            <div class="hstat"><div class="hstat-num">FOB</div><div class="hstat-label">Mumbai - JNPT</div></div>
             <div class="hstat"><div class="hstat-num">NABL</div><div class="hstat-label">Testing Available</div></div>
         </div>
     </div>
@@ -400,7 +411,7 @@
         <h2 class="section-title" id="about-h">India&rsquo;s Dedicated Onion Powder Export Partner</h2>
         <div class="about-grid">
             <div class="about-text">
-                <p>ASGT India &mdash; Advanced Supply &middot; Global Transit &mdash; is a registered export trading company based in Ahmednagar, Maharashtra. We specialise in sourcing, quality verification, and export of dehydrated onion powder to international importers, food manufacturers, and distributors.</p>
+                <p>ASGT India - Advanced Supply &middot; Global Transit - is a registered export trading company based in Ahmednagar, Maharashtra. We specialise in sourcing, quality verification, and export of dehydrated onion powder to international importers, food manufacturers, and distributors.</p>
                 <p>As a focused trading company, we act as a dedicated bridge between vetted Indian processors and global buyers. We work with processors from the Nashik–Lasalgaon belt selected for quality, documentation readiness, pricing stability, and export capability. We handle full export documentation, eliminating the complexity and uncertainty often faced by international buyers when sourcing from India.</p>
                 <p>Registered under India&rsquo;s Udyam MSME scheme and operating with one clear mandate: deliver export-grade onion powder with full transparency, correct documentation, and reliable supply timelines.</p>
                 <div class="about-badges">
@@ -435,7 +446,7 @@
 <section class="section product-bg" id="product" aria-labelledby="product-h">
     <div class="section-inner">
         <div class="section-label">Our Product</div>
-        <h2 class="section-title" id="product-h">Dehydrated Onion Powder &mdash; Export Grade</h2>
+        <h2 class="section-title" id="product-h">Dehydrated Onion Powder - Export Grade</h2>
         <p class="section-desc">Precision-processed onion powder from Maharashtra&rsquo;s premium growing belt. Available in 80&ndash;100 mesh with batch-specific Certificate of Analysis.</p>
         <div class="product-card">
             <div class="product-visual">
@@ -491,7 +502,7 @@
             <div class="why-card">
                 <div class="why-icon">&#128230;</div>
                 <h4>Buyer-Specific Packing</h4>
-                <p>Pack to your specification &mdash; bag size, labeling, and branding as required. We coordinate directly with the processor on your behalf.</p>
+                <p>Pack to your specification - bag size, labeling, and branding as required. We coordinate directly with the processor on your behalf.</p>
             </div>
             <div class="why-card">
                 <div class="why-icon">&#128196;</div>
@@ -501,12 +512,12 @@
             <div class="why-card">
                 <div class="why-icon">&#128674;</div>
                 <h4>FOB Mumbai Dispatch</h4>
-                <p>Goods dispatched from JNPT Mumbai &mdash; Asia&rsquo;s largest container port with direct connections to all major import destinations worldwide.</p>
+                <p>Goods dispatched from JNPT Mumbai - Asia&rsquo;s largest container port with direct connections to all major import destinations worldwide.</p>
             </div>
             <div class="why-card">
                 <div class="why-icon">&#128172;</div>
                 <h4>Single Point of Contact</h4>
-                <p>One export manager from inquiry to delivery. Regular updates at every stage &mdash; quote, procurement, dispatch, and arrival confirmation.</p>
+                <p>One export manager from inquiry to delivery. Regular updates at every stage - quote, procurement, dispatch, and arrival confirmation.</p>
             </div>
         </div>
     </div>
@@ -551,7 +562,7 @@
     <div class="section-inner">
         <div class="section-label">Export Markets</div>
         <h2 class="section-title" id="markets-h">Serving Buyers Across Key Markets</h2>
-        <p class="section-desc">We actively serve buyers in Southeast Asia, South Asia, and Western markets. If your country is not listed, contact us &mdash; we ship globally from JNPT Mumbai.</p>
+        <p class="section-desc">We actively serve buyers in Southeast Asia, South Asia, and Western markets. If your country is not listed, contact us - we ship globally from JNPT Mumbai.</p>
         <div class="markets-grid">
             <div class="market-card">
                 <span class="market-flag">&#127470;&#127465;</span>
@@ -586,7 +597,7 @@
     <div class="section-inner">
         <div class="section-label">Documentation &amp; Compliance</div>
         <h2 class="section-title" id="certs-h">Certifications &amp; Documents</h2>
-        <p class="section-desc">Confirm your specific requirements when enquiring &mdash; we will verify availability and include in your quotation.</p>
+        <p class="section-desc">Confirm your specific requirements when enquiring - we will verify availability and include in your quotation.</p>
         <div class="certs-grid">
             <div class="cert-card"><span class="cert-icon">&#128196;</span><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="pill-avail">Available</span></div>
             <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="pill-req">On Request</span></div>
@@ -632,7 +643,7 @@
                     <div class="ec-icon">&#128205;</div>
                     <div>
                         <div class="ec-label">Office Location</div>
-                        <div class="ec-val"><span>Ahmednagar, Maharashtra, India &mdash; 414001</span></div>
+                        <div class="ec-val"><span>Ahmednagar, Maharashtra, India - 414001</span></div>
                     </div>
                 </div>
             </div>
@@ -704,8 +715,8 @@
                         <div class="foot-india">INDIA &#8594;</div>
                     </div>
                 </div>
-                <p>Advanced Supply &middot; Global Transit &mdash; An export trading company dedicated to reliable supply of premium dehydrated onion powder from Maharashtra, India to buyers worldwide.</p>
-                <div class="freg">Udyam: UDYAM-MH-01-0300536 &nbsp;&middot;&nbsp; Ahmednagar, Maharashtra &mdash; 414001</div>
+                <p>Advanced Supply &middot; Global Transit - An export trading company dedicated to reliable supply of premium dehydrated onion powder from Maharashtra, India to buyers worldwide.</p>
+                <div class="freg">Udyam: UDYAM-MH-01-0300536 &nbsp;&middot;&nbsp; Ahmednagar, Maharashtra - 414001</div>
             </div>
             <div class="fcol">
                 <h4>Quick Links</h4>
@@ -734,7 +745,19 @@
     </div>
 </footer>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="success-overlay" id="success-overlay" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="success-card">
+        <div class="success-check" aria-hidden="true">&#10003;</div>
+        <h2 id="success-title">Enquiry Submitted!</h2>
+        <p class="success-msg">Thank you for reaching out to <strong>ASGT India</strong>. We have received your enquiry and will get back to you within <strong>24 hours</strong> on business days.</p>
+        <div class="success-divider"></div>
+        <p class="success-alt">Need faster assistance? Contact us directly:<br>
+            <a href="https://wa.me/919142515515" target="_blank" rel="noopener">&#128242; WhatsApp +91 91425 15515</a> &nbsp;&middot;&nbsp;
+            <a href="mailto:info@asglobaltrade.in">&#9993; info@asglobaltrade.in</a>
+        </p>
+        <button class="success-btn" id="success-close">Back to Website</button>
+    </div>
+</div>
 
 <script>
 (function () {
@@ -761,13 +784,22 @@
             }
         });
     }
-    if (window.location.search.indexOf('sent=1') !== -1) {
-        var t = document.getElementById('toast');
-        if (t) {
-            t.textContent = ‘✓ Enquiry sent! We’ll respond within 1 business day.’;
-            t.classList.add('show');
-            setTimeout(function () { t.classList.remove('show'); }, 6000);
-            history.replaceState(null, '', window.location.pathname);
+    if (window.location.search.indexOf(‘sent=1’) !== -1) {
+        var overlay = document.getElementById(‘success-overlay’);
+        var closeBtn = document.getElementById(‘success-close’);
+        if (overlay) {
+            overlay.classList.add(‘show’);
+            history.replaceState(null, ‘’, window.location.pathname);
+            function closeModal() {
+                overlay.classList.remove(‘show’);
+            }
+            if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
+            overlay.addEventListener(‘click’, function (e) {
+                if (e.target === overlay) closeModal();
+            });
+            document.addEventListener(‘keydown’, function (e) {
+                if (e.key === ‘Escape’) closeModal();
+            });
         }
     }
 }());

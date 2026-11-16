@@ -76,6 +76,22 @@
         }
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); line-height: 1.65; }
+
+        /* SUCCESS MODAL */
+        .success-overlay { display: none; position: fixed; inset: 0; background: rgba(6,15,30,.88); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .success-overlay.show { display: flex; }
+        .success-card { background: white; border-radius: 20px; padding: 52px 44px; max-width: 500px; width: 100%; text-align: center; box-shadow: 0 24px 72px rgba(0,0,0,.45); }
+        .success-check { width: 76px; height: 76px; background: #e8f5e9; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 34px; color: #2e7d32; font-weight: 900; }
+        .success-card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 26px; font-weight: 900; color: var(--navy); margin-bottom: 14px; }
+        .success-msg { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 10px; }
+        .success-msg strong { color: var(--navy); }
+        .success-divider { height: 1px; background: var(--border); margin: 20px 0; }
+        .success-alt { font-size: 13px; color: var(--text-muted); margin-bottom: 24px; line-height: 1.7; }
+        .success-alt a { color: var(--navy); font-weight: 600; text-decoration: none; }
+        .success-alt a:hover { text-decoration: underline; }
+        .success-btn { display: inline-block; background: var(--navy); color: white; font-weight: 700; font-size: 15px; padding: 14px 36px; border-radius: 8px; border: none; cursor: pointer; font-family: inherit; transition: background .2s; }
+        .success-btn:hover { background: var(--navy-dark); }
+
         .skip { position: absolute; top: -100px; left: 16px; z-index: 9999; background: var(--navy); color: white; padding: 10px 18px; border-radius: 0 0 6px 6px; text-decoration: none; font-weight: 700; transition: top .2s; }
         .skip:focus { top: 0; }
         *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 2px; }
@@ -548,6 +564,20 @@
     </div>
 </footer>
 
+<div class="success-overlay" id="success-overlay" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="success-card">
+        <div class="success-check" aria-hidden="true">&#10003;</div>
+        <h2 id="success-title">Enquiry Submitted!</h2>
+        <p class="success-msg">Thank you for reaching out to <strong>ASGT India</strong>. We have received your enquiry and will get back to you within <strong>24 hours</strong> on business days.</p>
+        <div class="success-divider"></div>
+        <p class="success-alt">Need faster assistance? Contact us directly:<br>
+            <a href="https://wa.me/919142515515" target="_blank" rel="noopener">&#128242; WhatsApp +91 91425 15515</a> &nbsp;&middot;&nbsp;
+            <a href="mailto:info@asglobaltrade.in">&#9993; info@asglobaltrade.in</a>
+        </p>
+        <button class="success-btn" id="success-close">Back to Website</button>
+    </div>
+</div>
+
 <script>
 (function () {
     var btn = document.getElementById('hamburger');
@@ -573,13 +603,17 @@
             }
         });
     }
-    if (window.location.search.indexOf('sent=1') !== -1) {
-        var toast = document.createElement('div');
-        toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a3d1a;color:white;padding:14px 28px;border-radius:8px;font-weight:700;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.3);font-family:inherit';
-        toast.textContent = '✓ Enquiry sent! We’ll respond within 24 hours.';
-        document.body.appendChild(toast);
-        setTimeout(function () { toast.remove(); }, 6000);
-        history.replaceState(null, '', window.location.pathname);
+    if (window.location.search.indexOf(‘sent=1’) !== -1) {
+        var overlay = document.getElementById(‘success-overlay’);
+        var closeBtn = document.getElementById(‘success-close’);
+        if (overlay) {
+            overlay.classList.add(‘show’);
+            history.replaceState(null, ‘’, window.location.pathname);
+            function closeModal() { overlay.classList.remove(‘show’); }
+            if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
+            overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
+            document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
+        }
     }
 }());
 </script>
