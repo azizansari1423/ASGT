@@ -129,8 +129,17 @@
         .btn-wa { border: 1.5px solid rgba(255,255,255,.32); color: white; font-weight: 600; font-size: 14px; padding: 14px 26px; border-radius: 7px; text-decoration: none; transition: border-color .2s, background .2s; display: inline-flex; align-items: center; gap: 8px; }
         .btn-wa:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
         .hero-right { display: flex; justify-content: center; align-items: center; position: relative; z-index: 1; }
-        .hero-emblem { width: 320px; height: 320px; }
-        .hero-emblem img { width: 100%; height: 100%; }
+        .hero-emblem {
+            width: 320px; height: 320px;
+            border-radius: 50%; overflow: hidden;
+            box-shadow: 0 0 0 3px rgba(212,162,74,.5), 0 0 0 7px rgba(212,162,74,.12), 0 20px 60px rgba(0,0,0,.55);
+            flex-shrink: 0;
+        }
+        .hero-emblem img {
+            width: 110%; height: 110%;
+            margin: -5% 0 0 -5%;
+            display: block;
+        }
         .hero-stats { border-top: 1px solid rgba(212,162,74,.18); position: relative; z-index: 1; }
         .hero-stats-row { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
         .hstat { padding: 24px 20px; border-right: 1px solid rgba(212,162,74,.12); transition: background .2s; text-align: center; }
@@ -326,7 +335,7 @@
         }
         @media (max-width: 600px) {
             .hero h1 { font-size: 32px; }
-            .hero-emblem { width: 240px; height: 240px; }
+            .hero-emblem { width: 240px; height: 240px; border-radius: 50%; overflow: hidden; }
             .why-grid { grid-template-columns: 1fr; }
             .process-steps { grid-template-columns: 1fr; }
             .about-stats { grid-template-columns: 1fr 1fr; }
@@ -377,7 +386,7 @@
         </div>
         <div class="hero-right">
             <div class="hero-emblem">
-                <img src="/emblem.png" alt="ASGT India — Advanced Supply Global Transit Premium Emblem" width="320" height="320" style="width:100%;height:100%;object-fit:contain;">
+                <img src="/emblem.png" alt="ASGT India — Advanced Supply Global Transit Premium Emblem" width="320" height="320">
             </div>
         </div>
     </div>
