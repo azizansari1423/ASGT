@@ -102,13 +102,8 @@
 
         /* NAV */
         nav { position: sticky; top: 0; z-index: 200; background: var(--white); border-bottom: 1px solid var(--border); height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 6%; box-shadow: 0 1px 8px rgba(0,0,0,.07); }
-        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-        .logo-bar { width: 3px; height: 44px; background: var(--navy); border-radius: 2px; flex-shrink: 0; }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-asgt { font-family: 'Playfair Display', Georgia, serif; font-size: 25px; font-weight: 900; color: var(--navy); letter-spacing: 1px; line-height: 1.1; }
-        .logo-india-row { display: flex; align-items: center; gap: 5px; }
-        .logo-india { font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 4px; border-bottom: 1.5px solid var(--gold); padding-bottom: 1px; }
-        .logo-arrow { color: var(--gold); font-size: 14px; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 48px; width: auto; display: block; }
         .nav-menu { display: flex; gap: 4px; list-style: none; align-items: center; }
         .nav-menu a { text-decoration: none; color: var(--text-muted); font-size: 13.5px; font-weight: 500; padding: 7px 12px; border-radius: 6px; transition: color .2s, background .2s; letter-spacing: .2px; }
         .nav-menu a:hover { color: var(--navy); background: var(--bg); }
@@ -342,14 +337,7 @@
 
 <nav aria-label="Main navigation">
     <a href="/" class="logo" aria-label="ASGT India — Home">
-        <div class="logo-bar" aria-hidden="true"></div>
-        <div class="logo-text">
-            <span class="logo-asgt">ASGT</span>
-            <div class="logo-india-row">
-                <span class="logo-india">INDIA</span>
-                <span class="logo-arrow" aria-hidden="true">&#8594;</span>
-            </div>
-        </div>
+        <img src="/primary_logo.png" alt="ASGT India" class="logo-img">
     </a>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
@@ -370,7 +358,7 @@
         <div class="hero-left">
             <span class="hero-badge">&#127998; Maharashtra, India &nbsp;&middot;&nbsp; Export Trading Company</span>
             <h1>Premium Dehydrated<em>Onion Powder</em></h1>
-            <p class="hero-sub">Sourced from India&rsquo;s Nashik&ndash;Lasalgaon belt &mdash; the world&rsquo;s largest onion-growing region. NABL-tested, fully documented, and shipped FOB Mumbai to buyers worldwide.</p>
+            <p class="hero-sub">Sourced from India&rsquo;s Nashik&ndash;Lasalgaon belt &mdash; the world&rsquo;s largest onion-growing region. Quality-verified, fully documented, and shipped FOB Mumbai to buyers worldwide.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn-gold">Request a Quote &#8594;</a>
                 <a href="https://wa.me/919142515515" class="btn-wa" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ASGT India">&#128242; WhatsApp Us</a>
@@ -378,16 +366,16 @@
         </div>
         <div class="hero-right">
             <div class="hero-emblem">
-                <img src="/asgt-emblem.svg" alt="ASGT India — Advanced Supply Global Transit Premium Emblem" width="320" height="320">
+                <img src="/emblem.png" alt="ASGT India — Advanced Supply Global Transit Premium Emblem" width="320" height="320" style="width:100%;height:100%;object-fit:contain;">
             </div>
         </div>
     </div>
     <div class="hero-stats" aria-label="Key highlights">
         <div class="hero-stats-row">
             <div class="hstat"><div class="hstat-num">1 MT+</div><div class="hstat-label">Min. Trial Order</div></div>
-            <div class="hstat"><div class="hstat-num">24 hrs</div><div class="hstat-label">Quote Response</div></div>
+            <div class="hstat"><div class="hstat-num">1 Day</div><div class="hstat-label">Quote Turnaround</div></div>
             <div class="hstat"><div class="hstat-num">FOB</div><div class="hstat-label">Mumbai &mdash; JNPT</div></div>
-            <div class="hstat"><div class="hstat-num">NABL</div><div class="hstat-label">Lab-Tested Quality</div></div>
+            <div class="hstat"><div class="hstat-num">NABL</div><div class="hstat-label">Testing Available</div></div>
         </div>
     </div>
 </section>
@@ -398,7 +386,7 @@
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-item"><span class="trust-icon">&#128230;</span><span>FOB Dispatch &nbsp;<strong>JNPT Mumbai</strong></span></div>
         <div class="trust-sep" aria-hidden="true"></div>
-        <div class="trust-item"><span class="trust-icon">&#128302;</span><span>NABL-Accredited &nbsp;<strong>Lab Testing</strong></span></div>
+        <div class="trust-item"><span class="trust-icon">&#128302;</span><span>NABL Lab Testing &nbsp;<strong>Arranged Per Batch</strong></span></div>
         <div class="trust-sep" aria-hidden="true"></div>
         <div class="trust-item"><span class="trust-icon">&#128196;</span><span>Complete &nbsp;<strong>Export Documentation</strong></span></div>
         <div class="trust-sep" aria-hidden="true"></div>
@@ -413,13 +401,13 @@
         <div class="about-grid">
             <div class="about-text">
                 <p>ASGT India &mdash; Advanced Supply &middot; Global Transit &mdash; is a registered export trading company based in Ahmednagar, Maharashtra. We specialise in sourcing, quality verification, and export of dehydrated onion powder to international importers, food manufacturers, and distributors.</p>
-                <p>As a focused trading company, we act as a dedicated bridge between verified Indian processors and global buyers. Every supplier in our network is physically visited, audited, and scored before selection. We handle full export documentation in-house, eliminating the complexity and uncertainty often faced by international buyers when sourcing from India.</p>
+                <p>As a focused trading company, we act as a dedicated bridge between vetted Indian processors and global buyers. We work with processors from the Nashik–Lasalgaon belt selected for quality, documentation readiness, pricing stability, and export capability. We handle full export documentation, eliminating the complexity and uncertainty often faced by international buyers when sourcing from India.</p>
                 <p>Registered under India&rsquo;s Udyam MSME scheme and operating with one clear mandate: deliver export-grade onion powder with full transparency, correct documentation, and reliable supply timelines.</p>
                 <div class="about-badges">
                     <span class="badge">&#127979; Udyam MSME</span>
-                    <span class="badge">&#128302; NABL Lab Testing</span>
+                    <span class="badge">&#128302; NABL Testing Available</span>
                     <span class="badge">&#127760; FOB Mumbai</span>
-                    <span class="badge">&#128196; APEDA / Chamber CoO</span>
+                    <span class="badge">&#128196; Chamber of Commerce CoO</span>
                 </div>
             </div>
             <div class="about-stats">
@@ -428,8 +416,8 @@
                     <div class="stat-label">Minimum Trial<br>Order Size</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-num">24 hrs</div>
-                    <div class="stat-label">Quote Response<br>Commitment</div>
+                    <div class="stat-num">1 Day</div>
+                    <div class="stat-label">Quote<br>Turnaround</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-num">FOB</div>
@@ -458,7 +446,7 @@
                     <span class="pv-tag">80&ndash;100 Mesh</span>
                     <span class="pv-tag">&le;5% Moisture</span>
                     <span class="pv-tag">18&ndash;24M Shelf Life</span>
-                    <span class="pv-tag">NABL Tested</span>
+                    <span class="pv-tag">Lab Tested Available</span>
                 </div>
             </div>
             <div class="product-details">
@@ -492,13 +480,13 @@
         <div class="why-grid">
             <div class="why-card">
                 <div class="why-icon">&#127807;</div>
-                <h4>Source-Verified Supply</h4>
-                <p>We physically visit and score processors before selection. Only verified suppliers with demonstrated export capability make it into our network.</p>
+                <h4>Vetted Processor Network</h4>
+                <p>We work exclusively with processors from the Nashik–Lasalgaon belt, selected for consistent quality, documentation readiness, pricing stability, and export capability.</p>
             </div>
             <div class="why-card">
                 <div class="why-icon">&#128302;</div>
-                <h4>NABL Lab-Tested Quality</h4>
-                <p>Products tested at NABL-accredited laboratories. Full COA covering moisture, color, mesh, and microbial parameters available per batch.</p>
+                <h4>Lab-Tested Quality</h4>
+                <p>NABL-accredited lab testing arranged per batch on request. Full COA covering moisture, color, mesh, and microbial parameters provided with every commercial order.</p>
             </div>
             <div class="why-card">
                 <div class="why-icon">&#128230;</div>
@@ -601,8 +589,8 @@
         <p class="section-desc">Confirm your specific requirements when enquiring &mdash; we will verify availability and include in your quotation.</p>
         <div class="certs-grid">
             <div class="cert-card"><span class="cert-icon">&#128196;</span><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="pill-avail">Available</span></div>
-            <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="pill-avail">Available</span></div>
-            <div class="cert-card"><span class="cert-icon">&#127979;</span><h5>Certificate of Origin</h5><p>Issued by APEDA / Chamber</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127979;</span><h5>Certificate of Origin</h5><p>Issued by Chamber of Commerce</p><span class="pill-avail">Available</span></div>
             <div class="cert-card"><span class="cert-icon">&#127807;</span><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="pill-avail">Available</span></div>
             <div class="cert-card"><span class="cert-icon">&#127829;</span><h5>FSSAI License</h5><p>India food safety compliance</p><span class="pill-req">On Request</span></div>
             <div class="cert-card"><span class="cert-icon">&#9733;</span><h5>Halal Certificate</h5><p>Muslim-majority market buyers</p><span class="pill-req">On Request</span></div>
@@ -617,7 +605,7 @@
         <div class="enquiry-left">
             <div class="section-label">Get In Touch</div>
             <h2 class="section-title section-title-white" id="contact-h">Request a Quote or Sample</h2>
-            <p>Share your requirement and we will respond within 24 hours with a quotation, sample dispatch details, or any additional information you need.</p>
+            <p>Share your requirement and we will respond within 1 business day with a quotation, sample dispatch details, or any additional information you need.</p>
             <div class="ec-list">
                 <div class="ec-item">
                     <div class="ec-icon">&#9993;</div>
@@ -651,7 +639,7 @@
         </div>
         <div class="enquiry-form-box">
             <h3>Send Your Enquiry</h3>
-            <p>We respond within 24 hours on business days.</p>
+            <p>We respond within 1 business day.</p>
             <!-- FormSubmit: on first submission, check info@asglobaltrade.in inbox for activation email and click confirm -->
             <form action="https://formsubmit.co/info@asglobaltrade.in" method="POST" novalidate>
                 <input type="hidden" name="_subject" value="New Enquiry — ASGT India Website">
@@ -776,7 +764,7 @@
     if (window.location.search.indexOf('sent=1') !== -1) {
         var t = document.getElementById('toast');
         if (t) {
-            t.textContent = '✓ Enquiry sent! We’ll respond within 24 hours.';
+            t.textContent = ‘✓ Enquiry sent! We’ll respond within 1 business day.’;
             t.classList.add('show');
             setTimeout(function () { t.classList.remove('show'); }, 6000);
             history.replaceState(null, '', window.location.pathname);
