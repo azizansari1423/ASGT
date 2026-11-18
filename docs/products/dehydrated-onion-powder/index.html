@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -335,6 +335,7 @@
     <div class="section-inner">
         <div class="section-label">Technical Specifications</div>
         <h2 class="section-title" id="specs-h">Complete Product Specifications</h2>
+        <p class="section-note" style="font-size:13px;color:var(--text-muted);margin-bottom:20px;">Parameters below are typical industry benchmarks for dehydrated onion powder from this region. Actual batch specifications are confirmed with the supplier at the time of order.</p>
         <div class="specs-layout">
             <table class="full-specs-table" aria-label="Dehydrated onion powder full specifications">
                 <thead>
@@ -353,7 +354,7 @@
                     <tr><td class="sp">Moisture Content</td><td class="sv">&le; 5%</td></tr>
                     <tr><td class="sp">Color</td><td class="sv">Cream to light tan</td></tr>
                     <tr><td class="sp">Ingredients</td><td class="sv">100% Dehydrated Onion - no additives</td></tr>
-                    <tr><td class="sp">Shelf Life</td><td class="sv">18&ndash;24 months from manufacturing date</td></tr>
+                    <tr><td class="sp">Shelf Life</td><td class="sv">18&ndash;24 months from manufacturing date (under recommended storage)</td></tr>
                     <tr><td class="sp">Storage</td><td class="sv">Cool, dry place - below 25&deg;C</td></tr>
                     <tr><td class="sp">Standard Packing</td><td class="sv">25 kg HDPE bag &nbsp;/&nbsp; 20 kg craft bag</td></tr>
                     <tr><td class="sp">Custom Packing</td><td class="sv">Available on request</td></tr>
@@ -448,8 +449,8 @@
                 <h4>Available Certifications</h4>
                 <ul class="q-list">
                     <li>Lab report (batch-specific) - on request</li>
-                    <li>Certificate of Origin (Chamber of Commerce)</li>
-                    <li>Phytosanitary Certificate (plant health)</li>
+                    <li>Certificate of Origin (Chamber of Commerce) - on request</li>
+                    <li>Phytosanitary Certificate (plant health) - on request</li>
                     <li>FSSAI License - on request</li>
                     <li>Halal Certificate - on request</li>
                     <li>Allergen Declaration - on request</li>
@@ -616,47 +617,61 @@
         });
     }
     function showModal() {
-        var overlay = document.getElementById(‘success-overlay’);
-        var closeBtn = document.getElementById(‘success-close’);
+        var overlay = document.getElementById('success-overlay');
+        var closeBtn = document.getElementById('success-close');
         if (!overlay) return;
-        overlay.classList.add(‘show’);
-        history.replaceState(null, ‘’, window.location.pathname);
-        function closeModal() { overlay.classList.remove(‘show’); }
-        if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
-        overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
-        document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
+        overlay.classList.add('show');
+        history.replaceState(null, '', window.location.pathname);
+        function closeModal() { overlay.classList.remove('show'); }
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
     }
 
-    if (window.location.search.indexOf(‘sent=1’) !== -1) { showModal(); }
+    if (window.location.search.indexOf('sent=1') !== -1) { showModal(); }
 
-    var enquiryForm = document.getElementById(‘enquiry-form’);
+    var enquiryForm = document.getElementById('enquiry-form');
     if (enquiryForm) {
-        enquiryForm.addEventListener(‘submit’, function (e) {
+        enquiryForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            var nameVal = enquiryForm.querySelector(‘#p-name’);
-            var companyVal = enquiryForm.querySelector(‘#p-company’);
-            var emailVal = enquiryForm.querySelector(‘#p-email’);
+            var nameVal = enquiryForm.querySelector('#p-name');
+            var companyVal = enquiryForm.querySelector('#p-company');
+            var emailVal = enquiryForm.querySelector('#p-email');
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (nameVal && !nameVal.value.trim()) { nameVal.focus(); nameVal.style.borderColor = ‘#c0392b’; return; } else if (nameVal) { nameVal.style.borderColor = ‘’; }
-            if (companyVal && !companyVal.value.trim()) { companyVal.focus(); companyVal.style.borderColor = ‘#c0392b’; return; } else if (companyVal) { companyVal.style.borderColor = ‘’; }
-            if (emailVal && (!emailVal.value.trim() || !emailPattern.test(emailVal.value.trim()))) { emailVal.focus(); emailVal.style.borderColor = ‘#c0392b’; return; } else if (emailVal) { emailVal.style.borderColor = ‘’; }
-            var submitBtn = enquiryForm.querySelector(‘[type="submit"]’);
-            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = ‘Sending…’; }
-            fetch(‘https://formsubmit.co/ajax/info@asglobaltrade.in’, {
-                method: ‘POST’,
+            if (nameVal && !nameVal.value.trim()) { nameVal.focus(); nameVal.style.borderColor = '#c0392b'; return; } else if (nameVal) { nameVal.style.borderColor = ''; }
+            if (companyVal && !companyVal.value.trim()) { companyVal.focus(); companyVal.style.borderColor = '#c0392b'; return; } else if (companyVal) { companyVal.style.borderColor = ''; }
+            if (emailVal && (!emailVal.value.trim() || !emailPattern.test(emailVal.value.trim()))) { emailVal.focus(); emailVal.style.borderColor = '#c0392b'; return; } else if (emailVal) { emailVal.style.borderColor = ''; }
+            var submitBtn = enquiryForm.querySelector('[type="submit"]');
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+            var errMsg = enquiryForm.querySelector('.form-error-msg');
+            if (!errMsg) {
+                errMsg = document.createElement('p');
+                errMsg.className = 'form-error-msg';
+                errMsg.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;display:none;';
+                enquiryForm.appendChild(errMsg);
+            }
+            errMsg.style.display = 'none';
+            fetch('https://formsubmit.co/ajax/info@asglobaltrade.in', {
+                method: 'POST',
                 body: new FormData(enquiryForm),
-                headers: { ‘Accept’: ‘application/json’ }
+                headers: { 'Accept': 'application/json' }
             })
             .then(function (r) { return r.json(); })
-            .then(function () {
-                enquiryForm.reset();
-                showModal();
+            .then(function (data) {
+                if (data && data.success === 'true') {
+                    enquiryForm.reset();
+                    showModal();
+                } else {
+                    errMsg.textContent = 'Submission failed. Please email us directly at info@asglobaltrade.in.';
+                    errMsg.style.display = 'block';
+                }
             })
             .catch(function () {
-                enquiryForm.submit();
+                errMsg.textContent = 'Could not send. Please email us directly at info@asglobaltrade.in.';
+                errMsg.style.display = 'block';
             })
             .finally(function () {
-                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = ‘Send Enquiry →’; }
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Enquiry →'; }
             });
         });
     }

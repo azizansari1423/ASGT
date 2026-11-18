@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -519,7 +519,7 @@
             </div>
             <div class="why-card">
                 <div class="why-icon">&#128302;</div>
-                <h4>Lab-Tested Quality</h4>
+                <h4>Quality Testing</h4>
                 <p>Third-party lab testing can be arranged on request. Full COA covering moisture, color, mesh, and microbial parameters available subject to testing arrangements.</p>
             </div>
             <div class="why-card">
@@ -623,9 +623,9 @@
         <p class="section-desc">Confirm your specific requirements when enquiring - we will verify availability and include in your quotation.</p>
         <div class="certs-grid">
             <div class="cert-card"><span class="cert-icon">&#128196;</span><h5>Certificate of Analysis</h5><p>Batch-specific lab parameters</p><span class="pill-req">On Request</span></div>
-            <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>NABL Lab Report</h5><p>Accredited laboratory testing</p><span class="pill-req">On Request</span></div>
-            <div class="cert-card"><span class="cert-icon">&#127979;</span><h5>Certificate of Origin</h5><p>Issued by Chamber of Commerce</p><span class="pill-avail">Available</span></div>
-            <div class="cert-card"><span class="cert-icon">&#127807;</span><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="pill-avail">Available</span></div>
+            <div class="cert-card"><span class="cert-icon">&#128302;</span><h5>Lab Test Report</h5><p>Third-party testing on request</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127979;</span><h5>Certificate of Origin</h5><p>Issued by Chamber of Commerce</p><span class="pill-req">On Request</span></div>
+            <div class="cert-card"><span class="cert-icon">&#127807;</span><h5>Phytosanitary Certificate</h5><p>Plant health compliance</p><span class="pill-req">On Request</span></div>
             <div class="cert-card"><span class="cert-icon">&#127829;</span><h5>FSSAI License</h5><p>India food safety compliance</p><span class="pill-req">On Request</span></div>
             <div class="cert-card"><span class="cert-icon">&#9733;</span><h5>Halal Certificate</h5><p>Muslim-majority market buyers</p><span class="pill-req">On Request</span></div>
             <div class="cert-card"><span class="cert-icon">&#9888;</span><h5>Allergen Declaration</h5><p>Product allergen statement</p><span class="pill-req">On Request</span></div>
@@ -818,47 +818,61 @@
         });
     }
     function showModal() {
-        var overlay = document.getElementById(‘success-overlay’);
-        var closeBtn = document.getElementById(‘success-close’);
+        var overlay = document.getElementById('success-overlay');
+        var closeBtn = document.getElementById('success-close');
         if (!overlay) return;
-        overlay.classList.add(‘show’);
-        history.replaceState(null, ‘’, window.location.pathname);
-        function closeModal() { overlay.classList.remove(‘show’); }
-        if (closeBtn) closeBtn.addEventListener(‘click’, closeModal);
-        overlay.addEventListener(‘click’, function (e) { if (e.target === overlay) closeModal(); });
-        document.addEventListener(‘keydown’, function (e) { if (e.key === ‘Escape’) closeModal(); });
+        overlay.classList.add('show');
+        history.replaceState(null, '', window.location.pathname);
+        function closeModal() { overlay.classList.remove('show'); }
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
     }
 
-    if (window.location.search.indexOf(‘sent=1’) !== -1) { showModal(); }
+    if (window.location.search.indexOf('sent=1') !== -1) { showModal(); }
 
-    var enquiryForm = document.getElementById(‘enquiry-form’);
+    var enquiryForm = document.getElementById('enquiry-form');
     if (enquiryForm) {
-        enquiryForm.addEventListener(‘submit’, function (e) {
+        enquiryForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            var nameVal = enquiryForm.querySelector(‘#f-name’);
-            var companyVal = enquiryForm.querySelector(‘#f-company’);
-            var emailVal = enquiryForm.querySelector(‘#f-email’);
+            var nameVal = enquiryForm.querySelector('#f-name');
+            var companyVal = enquiryForm.querySelector('#f-company');
+            var emailVal = enquiryForm.querySelector('#f-email');
             var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (nameVal && !nameVal.value.trim()) { nameVal.focus(); nameVal.style.borderColor = ‘#c0392b’; return; } else if (nameVal) { nameVal.style.borderColor = ‘’; }
-            if (companyVal && !companyVal.value.trim()) { companyVal.focus(); companyVal.style.borderColor = ‘#c0392b’; return; } else if (companyVal) { companyVal.style.borderColor = ‘’; }
-            if (emailVal && (!emailVal.value.trim() || !emailPattern.test(emailVal.value.trim()))) { emailVal.focus(); emailVal.style.borderColor = ‘#c0392b’; return; } else if (emailVal) { emailVal.style.borderColor = ‘’; }
-            var submitBtn = enquiryForm.querySelector(‘[type="submit"]’);
-            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = ‘Sending…’; }
-            fetch(‘https://formsubmit.co/ajax/info@asglobaltrade.in’, {
-                method: ‘POST’,
+            if (nameVal && !nameVal.value.trim()) { nameVal.focus(); nameVal.style.borderColor = '#c0392b'; return; } else if (nameVal) { nameVal.style.borderColor = ''; }
+            if (companyVal && !companyVal.value.trim()) { companyVal.focus(); companyVal.style.borderColor = '#c0392b'; return; } else if (companyVal) { companyVal.style.borderColor = ''; }
+            if (emailVal && (!emailVal.value.trim() || !emailPattern.test(emailVal.value.trim()))) { emailVal.focus(); emailVal.style.borderColor = '#c0392b'; return; } else if (emailVal) { emailVal.style.borderColor = ''; }
+            var submitBtn = enquiryForm.querySelector('[type="submit"]');
+            if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+            var errMsg = enquiryForm.querySelector('.form-error-msg');
+            if (!errMsg) {
+                errMsg = document.createElement('p');
+                errMsg.className = 'form-error-msg';
+                errMsg.style.cssText = 'color:#c0392b;font-size:13px;margin-top:8px;display:none;';
+                enquiryForm.appendChild(errMsg);
+            }
+            errMsg.style.display = 'none';
+            fetch('https://formsubmit.co/ajax/info@asglobaltrade.in', {
+                method: 'POST',
                 body: new FormData(enquiryForm),
-                headers: { ‘Accept’: ‘application/json’ }
+                headers: { 'Accept': 'application/json' }
             })
             .then(function (r) { return r.json(); })
-            .then(function () {
-                enquiryForm.reset();
-                showModal();
+            .then(function (data) {
+                if (data && data.success === 'true') {
+                    enquiryForm.reset();
+                    showModal();
+                } else {
+                    errMsg.textContent = 'Submission failed. Please email us directly at info@asglobaltrade.in.';
+                    errMsg.style.display = 'block';
+                }
             })
             .catch(function () {
-                enquiryForm.submit();
+                errMsg.textContent = 'Could not send. Please email us directly at info@asglobaltrade.in.';
+                errMsg.style.display = 'block';
             })
             .finally(function () {
-                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = ‘Send Enquiry →’; }
+                if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Enquiry →'; }
             });
         });
     }
