@@ -364,11 +364,11 @@
                 </div>
                 <div class="inco-box">
                     <h4>Logistics &amp; Trade Terms</h4>
-                    <div class="inco-row"><span class="inco-label">Standard Incoterm</span><span class="inco-val">FOB Mumbai</span></div>
-                    <div class="inco-row"><span class="inco-label">Port of Loading</span><span class="inco-val">JNPT, Mumbai</span></div>
-                    <div class="inco-row"><span class="inco-label">CFR / CIF</span><span class="inco-val">On request</span></div>
+                    <div class="inco-row"><span class="inco-label">Sea Freight</span><span class="inco-val">FOB / CFR / CIF - Mumbai JNPT</span></div>
+                    <div class="inco-row"><span class="inco-label">Air Freight</span><span class="inco-val">On request - EXW / FCA Mumbai</span></div>
                     <div class="inco-row"><span class="inco-label">Currency</span><span class="inco-val">USD preferred</span></div>
-                    <div class="inco-row"><span class="inco-label">Min. Trial Order</span><span class="inco-val">1 Metric Tonne</span></div>
+                    <div class="inco-row"><span class="inco-label">Min. Commercial Order</span><span class="inco-val">1 Metric Tonne (sea)</span></div>
+                    <div class="inco-row"><span class="inco-label">Sample / Urgent (air)</span><span class="inco-val">Small qty on request</span></div>
                     <div class="inco-row"><span class="inco-label">Sample Available</span><span class="inco-val">Yes - for qualified buyers</span></div>
                 </div>
             </div>
@@ -457,8 +457,9 @@
             <ul class="req-checklist">
                 <li>Required quantity (trial or commercial)</li>
                 <li>Preferred mesh size (standard: 80&ndash;100)</li>
+                <li>Transport mode: sea freight or air freight</li>
+                <li>Destination port or airport</li>
                 <li>Packaging size and type</li>
-                <li>Destination port or city</li>
                 <li>Certifications or documents required</li>
                 <li>Target price (optional - helps us plan)</li>
             </ul>
@@ -493,8 +494,23 @@
                 </div>
                 <div class="form-row">
                     <div class="fg">
+                        <label for="p-transport">Transport Mode</label>
+                        <select id="p-transport" name="transport_mode">
+                            <option value="">Select or leave flexible</option>
+                            <option value="Sea Freight">Sea Freight (standard for commercial orders)</option>
+                            <option value="Air Freight">Air Freight (samples / urgent small qty)</option>
+                            <option value="Flexible">No preference - advise best option</option>
+                        </select>
+                    </div>
+                    <div class="fg">
                         <label for="p-qty">Quantity Required</label>
-                        <input type="text" id="p-qty" name="quantity" placeholder="e.g. 5 MT, 10 MT">
+                        <input type="text" id="p-qty" name="quantity" placeholder="e.g. 5 MT, 10 MT, 50 kg sample">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="fg">
+                        <label for="p-port">Destination Port / Airport</label>
+                        <input type="text" id="p-port" name="destination_port" list="asgt-port-list" placeholder="Type to search or enter port name" autocomplete="off">
                     </div>
                     <div class="fg">
                         <label for="p-mesh">Mesh Size Required</label>
@@ -509,10 +525,6 @@
                     </div>
                 </div>
                 <div class="fg">
-                    <label for="p-port">Destination Port</label>
-                    <input type="text" id="p-port" name="destination_port" placeholder="e.g. Jakarta, Chittagong, Felixstowe">
-                </div>
-                <div class="fg">
                     <label for="p-msg">Additional Requirements</label>
                     <textarea id="p-msg" name="message" placeholder="Packing requirements, certifications needed, target price, or any other details&hellip;"></textarea>
                 </div>
@@ -522,6 +534,47 @@
         </div>
     </div>
 </section>
+
+<datalist id="asgt-port-list">
+    <option value="Tanjung Priok - Jakarta, Indonesia">
+    <option value="Tanjung Perak - Surabaya, Indonesia">
+    <option value="Belawan - Medan, Indonesia">
+    <option value="Makassar Port, Indonesia">
+    <option value="Soekarno-Hatta Airport (CGK) - Jakarta, Indonesia">
+    <option value="Port Klang - Kuala Lumpur, Malaysia">
+    <option value="Penang Port, Malaysia">
+    <option value="Port of Tanjung Pelepas - Johor, Malaysia">
+    <option value="Pasir Gudang Port - Johor, Malaysia">
+    <option value="KLIA Cargo Airport (KUL) - Kuala Lumpur, Malaysia">
+    <option value="Chittagong (Chattogram) Port, Bangladesh">
+    <option value="Mongla Port, Bangladesh">
+    <option value="Dhaka ICD (Inland Container Depot), Bangladesh">
+    <option value="Hazrat Shahjalal Airport (DAC) - Dhaka, Bangladesh">
+    <option value="Felixstowe, United Kingdom">
+    <option value="London Gateway, United Kingdom">
+    <option value="Southampton Port, United Kingdom">
+    <option value="Liverpool Port, United Kingdom">
+    <option value="Heathrow Airport (LHR) - London, United Kingdom">
+    <option value="Los Angeles / Long Beach Port (LA), USA">
+    <option value="New York / Newark Port (NY), USA">
+    <option value="Houston Port (TX), USA">
+    <option value="Seattle / Tacoma Port (WA), USA">
+    <option value="Miami Port (FL), USA">
+    <option value="JFK Airport - New York (JFK), USA">
+    <option value="LAX Airport - Los Angeles (LAX), USA">
+    <option value="O'Hare Airport - Chicago (ORD), USA">
+    <option value="Jebel Ali Port - Dubai, UAE">
+    <option value="Dubai Airport (DXB), UAE">
+    <option value="King Abdulaziz Port - Jeddah, Saudi Arabia">
+    <option value="Hamad Port - Doha, Qatar">
+    <option value="Singapore Port (PSA)">
+    <option value="Ho Chi Minh City Port, Vietnam">
+    <option value="Laem Chabang Port - Bangkok, Thailand">
+    <option value="Manila International Container Port, Philippines">
+    <option value="Colombo Port, Sri Lanka">
+    <option value="Karachi Port, Pakistan">
+    <option value="Other - specify in notes">
+</datalist>
 
 </main>
 
